@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thêm chuyên khoa - THAT Clinic</title>
+
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body class="admin-page">
+  <header class="site-header">
+    <div class="container header-wrapper">
+      <a class="brand" href="./add-doctor.html">
+        <span class="brand-mark"></span>
+        <span class="brand-name">THAT Clinic</span>
+      </a>
+
+      <nav class="main-nav admin-nav">
+        <a href="./add-doctor.html" class="nav-link">Thêm bác sĩ</a>
+        <a href="./delete-doctor.html" class="nav-link">Xóa bác sĩ</a>
+        <a href="./edit-doctor.html" class="nav-link">Sửa bác sĩ</a>
+        <a href="./manage-specialties.html" class="nav-link nav-highlight">Thêm chuyên khoa</a>
+        <a href="./view-appointments.html" class="nav-link">Xem lịch hẹn</a>
+        <a href="../guest/login.html" class="nav-link">Đăng xuất</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <section class="container">
+      <div class="admin-panel">
+        <h1 class="panel-title">Quản lý chuyên khoa</h1>
+
+        <form class="inline-form" id="specialty-form">
+          <input id="specialty-name" type="text" placeholder="Nhập tên chuyên khoa" required>
+          <button type="submit">Thêm chuyên khoa</button>
+        </form>
+
+        <div class="chip-list" id="specialty-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="brand-mark"></div>
+        <div>
+          <h4>THAT Clinic</h4>
+          <p>Đặt lịch khám tại nhà tiện lợi, an toàn và nhanh chóng.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/db-bridge.js"></script>
+  <script src="../assets/js/admin-tools.js"></script>
+</body>
+
+</html>

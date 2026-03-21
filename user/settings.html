@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cài đặt - THAT Clinic</title>
+
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/settings.css">
+</head>
+
+<body class="settings-page">
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-wrapper">
+      <a class="brand" href="./my-appointments.html">
+        <span class="brand-mark"></span>
+        <span class="brand-name">THAT Clinic</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="./my-appointments.html" class="nav-link">Hồ sơ</a>
+        <a href="./doctors.html" class="nav-link nav-highlight">Đặt lịch bác sĩ</a>
+        <a href="../guest/login.html" class="nav-link">Đăng xuất</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN LAYOUT -->
+  <main class="main-layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h3>Chăm sóc & Hồ sơ</h3>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="./my-appointments.html" class="sidebar-link">
+          <span class="link-icon"></span>
+          <span>Lịch hẹn</span>
+        </a>
+        <a href="#" class="sidebar-link is-active">
+          <span class="link-icon"></span>
+          <span>Cài đặt</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- CONTENT WRAPPER -->
+    <div class="content-wrapper">
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+        <h2 class="section-title">Cài đặt hồ sơ</h2>
+
+        <!-- Avatar Section -->
+        <div class="settings-section">
+          <h3 class="section-subtitle">Ảnh đại diện</h3>
+          <div class="avatar-upload">
+            <div class="avatar-preview"></div>
+            <div class="avatar-actions">
+              <button class="btn btn-upload">Tải ảnh lên</button>
+              <button class="btn btn-remove">Xóa ảnh</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personal Info Section -->
+        <div class="settings-section">
+          <h3 class="section-subtitle">Thông tin cá nhân</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullname">Họ và tên</label>
+              <input type="text" id="fullname" class="form-input" value="Nguyễn Văn A" placeholder="Nhập họ tên">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" class="form-input" value="nguyenvana@email.com" placeholder="Nhập email">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Số điện thoại</label>
+              <input type="tel" id="phone" class="form-input" value="+84 234 567 8910" placeholder="Nhập số điện thoại">
+            </div>
+
+            <div class="form-group">
+              <label for="dob">Ngày sinh</label>
+              <input type="date" id="dob" class="form-input" value="1990-05-15">
+            </div>
+
+            <div class="form-group">
+              <label for="gender">Giới tính</label>
+              <select id="gender" class="form-input">
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+                <option value="other">Khác</option>
+                <option value="not-say">Không công khai</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Địa chỉ</label>
+              <input type="text" id="address" class="form-input" value="Đường Lê Văn Lương, Quận Thanh Xuân" placeholder="Nhập địa chỉ">
+            </div>
+          </div>
+        </div>
+
+        <!-- Health Info Section -->
+        <div class="settings-section">
+          <h3 class="section-subtitle">Thông tin sức khỏe</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="height">Chiều cao (CM)</label>
+              <input type="number" id="height" class="form-input" value="160" placeholder="Nhập chiều cao">
+            </div>
+
+            <div class="form-group">
+              <label for="weight">Cân nặng (KG)</label>
+              <input type="number" id="weight" class="form-input" value="49" placeholder="Nhập cân nặng">
+            </div>
+
+            <div class="form-group">
+              <label for="blood-type">Nhóm máu</label>
+              <select id="blood-type" class="form-input">
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+" selected>B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label>Dị ứng</label>
+              <div class="allergy-tags">
+                <div class="tag">
+                  <span>Đậu phộng</span>
+                  <button class="tag-remove">×</button>
+                </div>
+                <div class="tag active-tag">
+                  <span>Hải sản</span>
+                  <button class="tag-remove">×</button>
+                </div>
+                <button class="btn-add-tag">+ Thêm dị ứng</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Insurance Section -->
+        <div class="settings-section">
+          <h3 class="section-subtitle">Thông tin bảo hiểm</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="insurance-provider">Nhà cung cấp bảo hiểm</label>
+              <input type="text" id="insurance-provider" class="form-input" value="Bảo hiểm xã hội Việt Nam" placeholder="Nhập nhà cung cấp">
+            </div>
+
+            <div class="form-group">
+              <label for="insurance-id">Mã số bảo hiểm</label>
+              <input type="text" id="insurance-id" class="form-input" value="1234567890" placeholder="Nhập mã số">
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h3 class="section-subtitle">Thông tin ngân hàng nhận hoàn tiền</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="bank-name">Ngân hàng</label>
+              <input type="text" id="bank-name" class="form-input" value="Vietcombank" placeholder="Nhập tên ngân hàng">
+            </div>
+
+            <div class="form-group">
+              <label for="bank-account">Số tài khoản</label>
+              <input type="text" id="bank-account" class="form-input" value="0123456789" placeholder="Nhập số tài khoản">
+            </div>
+          </div>
+        </div>
+
+        <!-- Security Section -->
+        <div class="settings-section">
+          <h3 class="section-subtitle">Bảo mật</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="current-password">Mật khẩu hiện tại</label>
+              <input type="password" id="current-password" class="form-input" placeholder="Nhập mật khẩu hiện tại">
+            </div>
+
+            <div class="form-group">
+              <label for="new-password">Mật khẩu mới</label>
+              <input type="password" id="new-password" class="form-input" placeholder="Nhập mật khẩu mới">
+            </div>
+
+            <div class="form-group">
+              <label for="confirm-password">Xác nhận mật khẩu mới</label>
+              <input type="password" id="confirm-password" class="form-input" placeholder="Nhập lại mật khẩu mới">
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="settings-actions">
+          <button class="btn btn-save">Lưu thay đổi</button>
+          <button class="btn btn-cancel-changes">Hủy bỏ</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="brand-mark"></div>
+        <div>
+          <h4>THAT Clinic</h4>
+          <p>Đặt lịch khám tại nhà tiện lợi, an toàn và nhanh chóng.</p>
+        </div>
+        <div class="footer-dots">
+          <span></span>
+          <span></span>
+          <span></span>   
+          <span></span>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h5>Điều hướng</h5>
+          <a href="#">Trang chủ</a>
+          <a href="#">Dịch vụ</a>
+          <a href="#">Bác sĩ</a>
+          <a href="#">Đăng ký</a>
+        </div>
+        <div>
+          <h5>Về chúng tôi</h5>
+          <a href="#">Giới thiệu</a>
+          <a href="#">Đội ngũ</a>
+          <a href="#">Nhà đầu tư</a>
+        </div>
+        <div>
+          <h5>Hỗ trợ</h5>
+          <a href="mailto:support@thatclinic.vn">support@thatclinic.vn</a>
+          <a href="tel:+84851234567">+84 851 234 567</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 THAT Clinic. Bảo lưu mọi quyền.</span>
+      <div class="footer-policy">
+        <a href="#">Điều khoản</a>
+        <a href="#">Chính sách</a>
+        <a href="#">Trợ năng</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/db-bridge.js"></script>
+  <script src="../assets/js/appointments-flow.js"></script>
+</body>
+
+</html>

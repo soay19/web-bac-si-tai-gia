@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Tạo lịch hẹn - THAT Clinic</title>
+
+	<link rel="stylesheet" href="../assets/css/base.css">
+	<link rel="stylesheet" href="../assets/css/layout.css">
+	<link rel="stylesheet" href="../assets/css/appointments.css">
+</head>
+
+<body class="appointments-page create-appointment-page">
+	<header class="site-header">
+		<div class="container header-wrapper">
+			<a class="brand" href="./my-appointments.html">
+				<span class="brand-mark"></span>
+				<span class="brand-name">THAT Clinic</span>
+			</a>
+
+			<nav class="main-nav">
+				<a href="./my-appointments.html" class="nav-link">Hồ sơ</a>
+				<a href="./doctors.html" class="nav-link nav-highlight">Đặt lịch bác sĩ</a>
+				<a href="../guest/login.html" class="nav-link">Đăng xuất</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="create-main">
+		<div class="container create-layout">
+			<section class="create-panel">
+				<div class="create-panel-header">
+					<h2>Tạo lịch hẹn</h2>
+					<button type="button" class="close-btn" aria-label="Đóng">×</button>
+				</div>
+
+				<form class="appointment-form" action="#" method="post">
+					<div class="field-grid two-cols">
+						<div class="field-group">
+							<label for="doctor">Bác sĩ</label>
+							<input id="doctor" name="doctor" type="text" placeholder="Tên bác sĩ" />
+						</div>
+						<div class="field-group">
+							<label for="specialty">Chuyên khoa</label>
+							<select id="specialty" name="specialty">
+								<option value="">Chọn chuyên khoa</option>
+								<option value="tong-quat">Tổng quát</option>
+								<option value="tim-mach">Tim mạch</option>
+								<option value="than-kinh">Thần kinh</option>
+								<option value="nhi">Nhi khoa</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="field-grid two-cols">
+						<div class="field-group">
+							<label for="location">Địa điểm</label>
+							<input id="location" name="location" type="text" placeholder="Địa điểm khám" />
+						</div>
+						<div class="field-group">
+							<label for="date">Ngày khám</label>
+							<input id="date" name="date" type="date" value="2026-03-12" />
+						</div>
+					</div>
+
+					<div class="field-grid three-cols schedule-row">
+						<div class="field-group">
+							<label for="schedule">Buổi</label>
+							<select id="schedule" name="schedule">
+								<option value="afternoon">Chiều</option>
+								<option value="morning">Sáng</option>
+								<option value="evening">Tối</option>
+							</select>
+						</div>
+						<div class="field-group">
+							<label for="from-time">Từ</label>
+							<input id="from-time" name="from-time" type="time" value="13:00" />
+						</div>
+						<div class="field-group">
+							<label for="to-time">Đến</label>
+							<input id="to-time" name="to-time" type="time" value="13:15" />
+						</div>
+					</div>
+
+					<div class="field-group duration-group">
+						<label>Thời lượng</label>
+						<div class="duration-options" role="radiogroup" aria-label="Chọn thời lượng">
+							<label class="duration-option">
+								<input type="radio" name="duration" value="15" checked>
+								<span>15 phút</span>
+							</label>
+							<label class="duration-option">
+								<input type="radio" name="duration" value="30">
+								<span>30 phút</span>
+							</label>
+							<label class="duration-option">
+								<input type="radio" name="duration" value="60">
+								<span>60 phút</span>
+							</label>
+						</div>
+					</div>
+				</form>
+
+				<div class="create-action">
+					<a href="./checkout.html" class="create-submit-btn">Tạo lịch hẹn</a>
+				</div>
+			</section>
+
+			<aside class="summary-panel">
+				<h3>Tóm tắt lịch hẹn</h3>
+				<p class="summary-note">Thông tin cuộc hẹn sẽ được hiển thị tại đây để bạn kiểm tra trước khi xác nhận.</p>
+
+				<article class="summary-card">
+					<h4>Tiêu đề lịch hẹn</h4>
+					<p class="summary-location">Địa điểm</p>
+					<p class="summary-datetime">12/03/2026 · 13:00 - 13:15</p>
+					<p class="summary-desc">Mô tả lịch hẹn ngắn gọn được hiển thị ở đây để người dùng kiểm tra trước khi tạo.</p>
+
+					<div class="summary-doctor">
+						<span class="summary-avatar"></span>
+						<div>
+							<strong>Tên bác sĩ</strong>
+							<span>Chuyên khoa</span>
+						</div>
+					</div>
+				</article>
+			</aside>
+		</div>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-content">
+			<div class="footer-brand">
+				<div class="brand-mark"></div>
+				<div>
+					<h4>THAT Clinic</h4>
+					<p>Đặt lịch khám tại nhà tiện lợi, an toàn và nhanh chóng.</p>
+				</div>
+				<div class="footer-dots">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+
+			<div class="footer-links">
+				<div>
+					<h5>Điều hướng</h5>
+					<a href="#">Trang chủ</a>
+					<a href="#">Dịch vụ</a>
+					<a href="#">Bác sĩ</a>
+					<a href="#">Đăng ký</a>
+				</div>
+				<div>
+					<h5>Về chúng tôi</h5>
+					<a href="#">Giới thiệu</a>
+					<a href="#">Đội ngũ</a>
+					<a href="#">Nhà đầu tư</a>
+				</div>
+				<div>
+					<h5>Hỗ trợ</h5>
+					<a href="mailto:support@thatclinic.vn">support@thatclinic.vn</a>
+					<a href="tel:+84851234567">+84 851 234 567</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container footer-bottom">
+			<span>© 2026 THAT Clinic. Bảo lưu mọi quyền.</span>
+			<div class="footer-policy">
+				<a href="#">Điều khoản</a>
+				<a href="#">Chính sách</a>
+				<a href="#">Trợ năng</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="../assets/js/db-bridge.js"></script>
+	<script src="../assets/js/appointments-flow.js"></script>
+</body>
+
+</html>

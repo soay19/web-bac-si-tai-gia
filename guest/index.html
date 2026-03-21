@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THAT Clinic - Trang chủ</title>
+
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/guest.css">
+</head>
+
+<body class="guest-page">
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-wrapper">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark"></span>
+        <span class="brand-name">THAT Clinic</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#home" class="nav-link is-active">Trang chủ</a>
+        <a href="#services" class="nav-link">Dịch vụ</a>
+        <a href="#doctors" class="nav-link">Bác sĩ</a>
+        <a href="./signup.html" class="nav-pill">Đăng ký</a>
+        <a href="./login.html" class="nav-pill is-ghost">Đăng nhập</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="guest">
+    <section id="home" class="hero">
+      <div class="container hero-wrapper">
+        <div class="hero-visual">
+          <div class="hero-photo">
+            <div class="hero-avatar hero-avatar--front"></div>
+            <div class="hero-avatar hero-avatar--back"></div>
+          </div>
+        </div>
+        <!-- TRANG 1 -->
+        <div class="hero-content">
+          <span class="eyebrow">Dịch vụ</span>
+          <h1>Đội ngũ giàu kinh nghiệm trong nhiều chuyên khoa</h1>
+          <p>
+            Kết nối bác sĩ uy tín, theo dõi hồ sơ khám và đặt lịch khám tại nhà
+            chỉ trong vài bước.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="./login.html">Đặt lịch ngay</a>
+            <a class="btn btn-outline" href="#services">Xem dịch vụ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+        <!-- TRANG DỊCH VỤ -->
+    <section id="services" class="section services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Gói dịch vụ nổi bật</h2>
+          <p>Chọn chuyên khoa phù hợp và đặt lịch khám tại nhà dễ dàng.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon icon-stethoscope"></div>
+            <h3>Khám tổng quát</h3>
+            <p>Đánh giá sức khỏe định kỳ, tư vấn cá nhân hóa.</p>
+            <a class="btn btn-primary" href="./login.html">Đặt lịch hẹn</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon icon-pediatrics"></div>
+            <h3>Nhi khoa</h3>
+            <p>Chăm sóc và theo dõi sức khỏe trẻ em tại nhà.</p>
+            <a class="btn btn-primary" href="./login.html">Đặt lịch hẹn</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon icon-nutrition"></div>
+            <h3>Dinh dưỡng</h3>
+            <p>Tư vấn chế độ ăn và cải thiện sức khỏe toàn diện.</p>
+            <a class="btn btn-primary" href="./login.html">Đặt lịch hẹn</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon icon-heart"></div>
+            <h3>Tim mạch</h3>
+            <p>Chẩn đoán sớm và quản lý sức khỏe tim mạch.</p>
+            <a class="btn btn-primary" href="./login.html">Đặt lịch hẹn</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon icon-eye"></div>
+            <h3>Nhãn khoa</h3>
+            <p>Kiểm tra thị lực và chăm sóc mắt định kỳ.</p>
+            <a class="btn btn-primary" href="./login.html">Đặt lịch hẹn</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon icon-ortho"></div>
+            <h3>Chỉnh hình</h3>
+            <p>Phục hồi vận động, giảm đau nhức hiệu quả.</p>
+            <a class="btn btn-primary" href="./login.html">Đặt lịch hẹn</a>
+          </article>
+        </div>
+      </div>
+    </section>
+        <!-- TRANG BÁC SĨ -->
+    <section id="doctors" class="section doctors">
+        
+      <div class="container doctor-layout">
+        <aside class="doctor-filter">
+          <h2>Chuyên khoa</h2>
+          <nav class="doctor-filter-nav" aria-label="Danh sách chuyên khoa">
+            <a href="#khoa-tong-quat" class="filter-link">Tổng quát</a>
+            <a href="#khoa-nhi-khoa" class="filter-link">Nhi khoa</a>
+            <a href="#khoa-dinh-duong" class="filter-link">Dinh dưỡng</a>
+            <a href="#khoa-tim-mach" class="filter-link">Tim mạch</a>
+            <a href="#khoa-nhan-khoa" class="filter-link">Nhãn khoa</a>
+            <a href="#khoa-co-xuong-khop" class="filter-link">chỉnh hình</a>
+          </nav>
+        </aside>
+
+        <div class="doctor-content">
+          
+          <!-- LIST TỔNG QUÁT -->
+          <div class="pill" id="khoa-tong-quat">Tổng quát</div>
+          <div class="doctor-grid">
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Nguyễn Minh Anh</h3>
+                <span>Tổng quát</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 350k</span>
+                  <span class="doctor-rating">4.8</span>
+                </div>
+              </div>
+            </article>
+            
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Trần Gia Huy</h3>
+                <span>Tổng quát</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 400k</span>
+                  <span class="doctor-rating">4.9</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Lê Thanh Hà</h3>
+                <span>Tổng quát</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 320k</span>
+                  <span class="doctor-rating">4.7</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- LIST NHI KHOA -->
+          <div class="pill" id="khoa-nhi-khoa">Nhi khoa</div>
+          <div class="doctor-grid">
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Phạm Ngọc Thảo</h3>
+                <span>Nhi khoa</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 380k</span>
+                  <span class="doctor-rating">4.8</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Đặng Tuấn Kiệt</h3>
+                <span>Nhi khoa</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 360k</span>
+                  <span class="doctor-rating">4.6</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Vũ Hoàng Yến</h3>
+                <span>Nhi khoa</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 410k</span>
+                  <span class="doctor-rating">4.9</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- LIST DINH DƯỠNG --> 
+          <div class="pill" id="khoa-dinh-duong">Dinh dưỡng</div>
+          <div class="doctor-grid">
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Nguyễn Thu Trang</h3>
+                <span>Dinh dưỡng</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 390k</span>
+                  <span class="doctor-rating">4.7</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Phạm Quốc Bảo</h3>
+                <span>Dinh dưỡng</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 420k</span>
+                  <span class="doctor-rating">4.8</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Lý Thảo Nhi</h3>
+                <span>Dinh dưỡng</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 360k</span>
+                  <span class="doctor-rating">4.6</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- LIST TIM MẠCH -->
+          <div class="pill" id="khoa-tim-mach">Tim mạch</div>
+          <div class="doctor-grid">
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Trần Đức Minh</h3>
+                <span>Tim mạch</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 450k</span>
+                  <span class="doctor-rating">4.9</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Phan Hồng An</h3>
+                <span>Tim mạch</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 430k</span>
+                  <span class="doctor-rating">4.8</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Lê Phương Thảo</h3>
+                <span>Tim mạch</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 410k</span>
+                  <span class="doctor-rating">4.7</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="pill" id="khoa-nhan-khoa">Nhãn khoa</div>
+          <div class="doctor-grid">
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Nguyễn Hồng Nhung</h3>
+                <span>Nhãn khoa</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 370k</span>
+                  <span class="doctor-rating">4.6</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Phạm Gia Hân</h3>
+                <span>Nhãn khoa</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 400k</span>
+                  <span class="doctor-rating">4.8</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Trịnh Minh Khôi</h3>
+                <span>Nhãn khoa</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 380k</span>
+                  <span class="doctor-rating">4.7</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="pill" id="khoa-co-xuong-khop">chỉnh hình</div>
+          <div class="doctor-grid">
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Đinh Quang Huy</h3>
+                <span>chỉnh hình</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 420k</span>
+                  <span class="doctor-rating">4.7</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Trần Anh Tuấn</h3>
+                <span>chỉnh hình</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 390k</span>
+                  <span class="doctor-rating">4.6</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="doctor-card">
+              <div class="doctor-photo"></div>
+              <div class="doctor-info">
+                <h3>BS. Nguyễn Bảo Ngọc</h3>
+                <span>chỉnh hình</span>
+                <div class="doctor-meta">
+                  <span class="doctor-fee">Phí: 410k</span>
+                  <span class="doctor-rating">4.8</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="brand-mark"></div>
+        <div>
+          <h4>THAT Clinic</h4>
+          <p>Đặt lịch khám tại nhà tiện lợi, an toàn và nhanh chóng.</p>
+        </div>
+        <div class="footer-dots">
+          <span></span>
+          <span></span>
+          <span></span>   
+          <span></span>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h5>Điều hướng</h5>
+          <a href="#home">Trang chủ</a>
+          <a href="#services">Dịch vụ</a>
+          <a href="#doctors">Bác sĩ</a>
+          <a href="./signup.html">Đăng ký</a>
+        </div>
+        <div>
+          <h5>Về chúng tôi</h5>
+          <a href="#">Giới thiệu</a>
+          <a href="#">Đội ngũ</a>
+          <a href="#">Nhà đầu tư</a>
+        </div>
+        <div>
+          <h5>Hỗ trợ</h5>
+          <a href="mailto:support@thatclinic.vn">support@thatclinic.vn</a>
+          <a href="tel:+84851234567">+84 851 234 567</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 THAT Clinic. Bảo lưu mọi quyền.</span>
+      <div class="footer-policy">
+        <a href="#">Điều khoản</a>
+        <a href="#">Chính sách</a>
+        <a href="#">Trợ năng</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id]');
+
+    //xử lí nhấp chuột điều hướng
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        navLinks.forEach(l => l.classList.remove('is-active'));
+        link.classList.add('is-active');
+      });
+    });
+
+    // xử lí roll điều hướng
+    const observerOptions = {
+      threshold: 0,
+      rootMargin: '-50% 0px -50% 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach(link => {
+            link.classList.remove('is-active');
+          });
+          navLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('is-active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>

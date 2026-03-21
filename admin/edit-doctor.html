@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sửa bác sĩ - THAT Clinic</title>
+
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/doctors.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body class="doctors-page admin-page edit-page">
+  <header class="site-header">
+    <div class="container header-wrapper">
+      <a class="brand" href="./add-doctor.html">
+        <span class="brand-mark"></span>
+        <span class="brand-name">THAT Clinic</span>
+      </a>
+
+      <nav class="main-nav admin-nav">
+        <a href="./add-doctor.html" class="nav-link">Thêm bác sĩ</a>
+        <a href="./delete-doctor.html" class="nav-link">Xóa bác sĩ</a>
+        <a href="./edit-doctor.html" class="nav-link nav-highlight">Sửa bác sĩ</a>
+        <a href="./manage-specialties.html" class="nav-link">Thêm chuyên khoa</a>
+        <a href="./view-appointments.html" class="nav-link">Xem lịch hẹn</a>
+        <a href="../guest/login.html" class="nav-link">Đăng xuất</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-layout doctors-layout">
+    <div class="content-wrapper doctors-content">
+      <div class="main-content">
+        <div class="content-header">
+          <h2 class="section-title">Sửa thông tin bác sĩ</h2>
+          <div class="search-box">
+            <input type="text" id="doctor-edit-search" placeholder="Tìm kiếm bác sĩ..." />
+            <button class="btn-search" id="doctor-edit-search-btn" type="button">🔍</button>
+          </div>
+        </div>
+
+        <nav class="specialty-nav" id="doctor-edit-specialty-nav" aria-label="Điều hướng chuyên khoa"></nav>
+        <div id="doctor-edit-sections"></div>
+      </div>
+    </div>
+  </main>
+
+  <div class="edit-modal" id="doctor-edit-modal" hidden>
+    <div class="edit-modal-backdrop" data-close-modal="true"></div>
+    <div class="edit-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="doctor-edit-modal-title">
+      <button class="edit-modal-close" id="doctor-edit-close" type="button" aria-label="Đóng">×</button>
+      <h3 id="doctor-edit-modal-title">Sửa thông tin bác sĩ</h3>
+      <form id="doctor-edit-form" class="edit-modal-form">
+        <label for="doctor-edit-name">Tên bác sĩ</label>
+        <input id="doctor-edit-name" name="doctorName" type="text" required />
+
+        <label for="doctor-edit-specialty">Chuyên khoa</label>
+        <select id="doctor-edit-specialty" name="doctorSpecialty" required></select>
+
+        <button type="submit" class="edit-modal-submit">Lưu thay đổi</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="brand-mark"></div>
+        <div>
+          <h4>THAT Clinic</h4>
+          <p>Đặt lịch khám tại nhà tiện lợi, an toàn và nhanh chóng.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/db-bridge.js"></script>
+  <script src="../assets/js/admin-tools.js"></script>
+</body>
+
+</html>

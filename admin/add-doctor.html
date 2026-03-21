@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Thêm bác sĩ - THAT Clinic</title>
+
+	<link rel="stylesheet" href="../assets/css/base.css">
+	<link rel="stylesheet" href="../assets/css/layout.css">
+	<link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body class="admin-page">
+	<header class="site-header">
+		<div class="container header-wrapper">
+			<a class="brand" href="./add-doctor.html">
+				<span class="brand-mark"></span>
+				<span class="brand-name">THAT Clinic</span>
+			</a>
+
+			<nav class="main-nav admin-nav">
+				<a href="./add-doctor.html" class="nav-link nav-highlight">Thêm bác sĩ</a>
+				<a href="./delete-doctor.html" class="nav-link">Xóa bác sĩ</a>
+				<a href="./edit-doctor.html" class="nav-link">Sửa bác sĩ</a>
+				<a href="./manage-specialties.html" class="nav-link">Thêm chuyên khoa</a>
+				<a href="./view-appointments.html" class="nav-link">Xem lịch hẹn</a>
+				<a href="../guest/login.html" class="nav-link">Đăng xuất</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="admin-main">
+		<section class="container">
+			<div class="admin-actions">
+				<a class="admin-action-link" href="./manage-specialties.html">Thêm chuyên khoa</a>
+				<a class="admin-action-link" href="./view-appointments.html">Xem lịch hẹn</a>
+				<a class="admin-action-link" href="./edit-doctor.html">Sửa bác sĩ</a>
+			</div>
+
+			<div class="admin-form-card">
+				<div class="card-header">
+					<h1>Tạo bác sĩ</h1>
+					<button type="button" class="card-close" aria-label="Đóng">×</button>
+				</div>
+
+				<form class="doctor-form" action="#" method="post">
+					<div class="field-grid two-cols">
+						<div class="field-group">
+							<label for="doctor-name">Bác sĩ</label>
+							<input id="doctor-name" name="doctorName" type="text" placeholder="Tên bác sĩ" />
+						</div>
+
+						<div class="field-group">
+							<label for="specialty">Chuyên khoa</label>
+							<div class="select-wrap">
+								<select id="specialty" name="specialty">
+									<option value="">Chọn chuyên khoa</option>
+									<option value="general">Tổng quát</option>
+									<option value="pediatrics">Nhi khoa</option>
+									<option value="nutrition">Dinh dưỡng</option>
+									<option value="cardiology">Tim mạch</option>
+									<option value="dermatology">Da liễu</option>
+									<option value="orthopedics">Chỉnh hình</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="field-grid two-cols">
+						<div class="field-group">
+							<label for="phone-number">Số điện thoại</label>
+							<input id="phone-number" name="phone" type="tel" placeholder="Số điện thoại" />
+						</div>
+
+						<div class="field-group">
+							<label for="date">Ngày</label>
+							<div class="date-wrap">
+								<input id="date" name="date" type="text" placeholder="12 Thg 01 2025" />
+								<span class="date-icon" aria-hidden="true">📅</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="field-row">
+						<label for="email">Thư điện tử</label>
+						<input id="email" name="email" type="email" placeholder="Nhập thư điện tử" />
+					</div>
+
+					<div class="form-action">
+						<button type="submit" class="create-btn">Tạo</button>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-content">
+			<div class="footer-brand">
+				<div class="brand-mark"></div>
+				<div>
+					<h4>THAT Clinic</h4>
+					<p>Đặt lịch khám tại nhà tiện lợi, an toàn và nhanh chóng.</p>
+				</div>
+				<div class="footer-dots">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+
+			<div class="footer-links">
+				<div>
+					<h5>Điều hướng</h5>
+					<a href="#">Trang chủ</a>
+					<a href="#">Bác sĩ</a>
+					<a href="#">Lịch hẹn</a>
+					<a href="#">Hỗ trợ</a>
+				</div>
+				<div>
+					<h5>Về chúng tôi</h5>
+					<a href="#">Giới thiệu</a>
+					<a href="#">Sự nghiệp</a>
+					<a href="#">Nhà đầu tư</a>
+				</div>
+				<div>
+					<h5>Cần hỗ trợ?</h5>
+					<a href="mailto:support@thatclinic.vn">support@thatclinic.vn</a>
+					<a href="tel:+84851234567">+84 851 234 567</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container footer-bottom">
+			<span>© 2026 THAT Clinic. Bảo lưu mọi quyền.</span>
+			<div class="footer-policy">
+				<a href="#">Điều khoản &amp; Điều kiện</a>
+				<a href="#">Chính sách riêng tư</a>
+				<a href="#">Tuyên bố trợ năng</a>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

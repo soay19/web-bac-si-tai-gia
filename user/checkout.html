@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Thanh toán - THAT Clinic</title>
+
+	<link rel="stylesheet" href="../assets/css/base.css">
+	<link rel="stylesheet" href="../assets/css/layout.css">
+	<link rel="stylesheet" href="../assets/css/appointments.css">
+</head>
+
+<body class="appointments-page checkout-page">
+	<header class="site-header">
+		<div class="container header-wrapper">
+			<a class="brand" href="./my-appointments.html">
+				<span class="brand-mark"></span>
+				<span class="brand-name">THAT Clinic</span>
+			</a>
+
+			<nav class="main-nav">
+				<a href="./my-appointments.html" class="nav-link">Hồ sơ</a>
+				<a href="./doctors.html" class="nav-link nav-highlight">Đặt lịch bác sĩ</a>
+				<a href="../guest/login.html" class="nav-link">Đăng xuất</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="checkout-main">
+		<div class="container checkout-layout">
+			<section class="payment-panel">
+				<h1 class="checkout-title">Thanh toán</h1>
+
+				<div class="invoice-grid">
+					<div class="invoice-left">
+						<h2>Lịch hẹn khám</h2>
+						<table class="invoice-table">
+							<thead>
+								<tr>
+									<th>Thông tin</th>
+									<th class="text-right">Giá tiền</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Tên bác sĩ: BS. Nguyễn Hữu Trí</td>
+									<td class="text-right">250.000đ</td>
+								</tr>
+								<tr>
+									<td>Chuyên khoa: Nội tổng quát</td>
+									<td class="text-right">0đ</td>
+								</tr>
+								<tr>
+									<td>Dịch vụ khám tại nhà</td>
+									<td class="text-right">350.000đ</td>
+								</tr>
+								<tr>
+									<td>Phí di chuyển</td>
+									<td class="text-right">100.000đ</td>
+								</tr>
+								<tr>
+									<td>Phụ phí ngoài giờ</td>
+									<td class="text-right">150.000đ</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="payment-total">
+							<p><span>Tạm tính</span><strong>850.000đ</strong></p>
+							<p class="grand"><span>Thành tiền</span><strong>850.000đ</strong></p>
+						</div>
+					</div>
+
+					<aside class="invoice-right">
+						<h3>Hình thức thanh toán</h3>
+
+						<div class="qr-box">
+							<img class="vnpay-logo" src="../assets/img/vnpay.svg" alt="VNPay">
+							<img class="qr-image" src="../assets/img/qr-vnpay.svg" alt="Mã QR thanh toán">
+						</div>
+
+						<div class="paid-action">
+							<button type="button" class="paid-btn">Đã thanh toán</button>
+						</div>
+					</aside>
+				</div>
+			</section>
+		</div>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-content">
+			<div class="footer-brand">
+				<div class="brand-mark"></div>
+				<div>
+					<h4>THAT Clinic</h4>
+					<p>Đặt lịch khám tại nhà tiện lợi, an toàn và nhanh chóng.</p>
+				</div>
+				<div class="footer-dots">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+
+			<div class="footer-links">
+				<div>
+					<h5>Điều hướng</h5>
+					<a href="#">Trang chủ</a>
+					<a href="#">Dịch vụ</a>
+					<a href="#">Bác sĩ</a>
+					<a href="#">Đăng ký</a>
+				</div>
+				<div>
+					<h5>Về chúng tôi</h5>
+					<a href="#">Giới thiệu</a>
+					<a href="#">Đội ngũ</a>
+					<a href="#">Nhà đầu tư</a>
+				</div>
+				<div>
+					<h5>Hỗ trợ</h5>
+					<a href="mailto:support@thatclinic.vn">support@thatclinic.vn</a>
+					<a href="tel:+84851234567">+84 851 234 567</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container footer-bottom">
+			<span>© 2026 THAT Clinic. Bảo lưu mọi quyền.</span>
+			<div class="footer-policy">
+				<a href="#">Điều khoản</a>
+				<a href="#">Chính sách</a>
+				<a href="#">Trợ năng</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="../assets/js/db-bridge.js"></script>
+	<script src="../assets/js/appointments-flow.js"></script>
+</body>
+
+</html>

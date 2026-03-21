@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xem lịch hẹn - THAT Clinic</title>
+
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body class="admin-page">
+  <header class="site-header">
+    <div class="container header-wrapper">
+      <a class="brand" href="./add-doctor.html">
+        <span class="brand-mark"></span>
+        <span class="brand-name">THAT Clinic</span>
+      </a>
+
+      <nav class="main-nav admin-nav">
+        <a href="./add-doctor.html" class="nav-link">Thêm bác sĩ</a>
+        <a href="./delete-doctor.html" class="nav-link">Xóa bác sĩ</a>
+        <a href="./edit-doctor.html" class="nav-link">Sửa bác sĩ</a>
+        <a href="./manage-specialties.html" class="nav-link">Thêm chuyên khoa</a>
+        <a href="./view-appointments.html" class="nav-link nav-highlight">Xem lịch hẹn</a>
+        <a href="../guest/login.html" class="nav-link">Đăng xuất</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <section class="container">
+      <div class="admin-panel">
+        <h1 class="panel-title">Danh sách lịch hẹn</h1>
+
+        <table class="appointments-table">
+          <thead>
+            <tr>
+              <th>Tiêu đề</th>
+              <th>Bác sĩ</th>
+              <th>Ngày</th>
+              <th>Địa điểm</th>
+              <th>Trạng thái</th>
+              <th>Hoàn tiền</th>
+            </tr>
+          </thead>
+          <tbody id="appointments-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div id="refund-modal" class="refund-modal" hidden>
+    <div class="refund-modal-backdrop" data-close-modal="true"></div>
+    <div class="refund-modal-dialog">
+      <button class="refund-modal-close" id="refund-modal-close">×</button>
+      <h3 id="refund-modal-title">Chi tiết hoàn tiền</h3>
+      <div class="refund-modal-content">
+        <p><strong>Số tiền:</strong> <span id="refund-amount"></span></p>
+        <p><strong>Bệnh nhân:</strong> <span id="refund-user"></span></p>
+        <p><strong>Ngân hàng:</strong> <span id="refund-bank"></span></p>
+        <p><strong>Số tài khoản:</strong> <span id="refund-account"></span></p>
+      </div>
+      <div class="refund-modal-actions">
+        <button type="button" class="btn-cancel" id="refund-cancel">Hủy</button>
+        <button type="button" class="btn-confirm" id="refund-confirm">Đã thanh toán</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="brand-mark"></div>
+        <div>
+          <h4>THAT Clinic</h4>
+          <p>Đặt lịch khám tại nhà tiện lợi, an toàn và nhanh chóng.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/db-bridge.js"></script>
+  <script src="../assets/js/admin-tools.js"></script>
+</body>
+
+</html>

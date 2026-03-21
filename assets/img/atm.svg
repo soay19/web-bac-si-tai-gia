@@ -1,0 +1,5 @@
+<svg width="120" height="52" viewBox="0 0 120 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1" y="1" width="118" height="50" rx="10" fill="#FFFFFF" stroke="#D9E2EC"/>
+  <rect x="33" y="13" width="54" height="26" rx="6" fill="#F3F4F6" stroke="#C7D2FE"/>
+  <text x="60" y="31" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#1D4ED8">ATM</text>
+</svg>

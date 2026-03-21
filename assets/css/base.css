@@ -1,0 +1,44 @@
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif, Timnes New Roman, serif;
+  color:#222;
+  background:#fff;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
+
+.container{
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+}
+/* Nút */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:40px;
+  padding:0 14px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  border:1px solid transparent;
+  cursor:pointer;
+  transition: .2s ease;
+}
+
+.btn-primary{
+  background:#1e90ff;
+  color:#fff;
+}
+.btn-primary:hover{ filter: brightness(.95); }
+
+.btn-outline{
+  background:transparent;
+  color:#1e90ff;
+  border-color:#1e90ff;
+}
+.btn-outline:hover{
+  background:#1e90ff;
+  color:#fff;
+}
