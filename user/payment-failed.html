@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Thanh toán thất bại - THAT Clinic</title>
+
+	<link rel="stylesheet" href="../assets/css/base.css">
+	<link rel="stylesheet" href="../assets/css/layout.css">
+	<style>
+		.error-page {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: calc(100vh - 76px);
+			padding: 24px;
+			background: linear-gradient(135deg, #ffe4e6 0%, #fecaca 100%);
+		}
+
+		.error-card {
+			background: #fff;
+			border: 1px solid #fecdd3;
+			border-radius: 12px;
+			padding: 28px;
+			max-width: 520px;
+			width: 100%;
+			text-align: center;
+			box-shadow: 0 8px 24px rgba(153, 27, 27, 0.12);
+		}
+
+		.error-card h1 {
+			margin: 0 0 10px;
+			font-size: 24px;
+			color: #991b1b;
+		}
+
+		.error-card p {
+			margin: 0;
+			color: #7f1d1d;
+			font-size: 15px;
+		}
+	</style>
+</head>
+
+<body class="appointments-page">
+	<header class="site-header">
+		<div class="container header-wrapper">
+			<a class="brand" href="./my-appointments.html">
+				<span class="brand-mark"></span>
+				<span class="brand-name">THAT Clinic</span>
+			</a>
+
+			<nav class="main-nav">
+				<a href="./my-appointments.html" class="nav-link">Hồ sơ</a>
+				<a href="./doctors.html" class="nav-link nav-highlight">Đặt lịch bác sĩ</a>
+				<a href="../guest/login.html" class="nav-link">Đăng xuất</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="error-page">
+		<div class="error-card">
+			<h1>Thanh toán thất bại</h1>
+			<p>Vui lòng bấm OK ở thông báo để quay lại trang lịch hẹn.</p>
+		</div>
+	</main>
+
+	<script>
+		alert('Thanh toán thất bại. Bạn sẽ được quay lại trang lịch hẹn.');
+		window.location.href = './my-appointments.html';
+	</script>
+</body>
+
+</html>

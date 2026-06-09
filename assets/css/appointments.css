@@ -158,7 +158,7 @@ body.appointments-page {
 /* CONTENT WRAPPER */
 .content-wrapper {
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: 1fr;
   gap: 20px;
   padding: 30px;
   overflow-y: auto;
@@ -297,6 +297,61 @@ body.appointments-page {
 
 .btn-cancel:hover {
   background: var(--blue-700);
+}
+
+/* PROFILE PANEL */
+/* APPOINTMENT ACTIONS */
+.appointment-actions {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 120px;
+}
+
+.appointment-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-cancel {
+  background: #ef4444;
+  color: var(--white);
+}
+
+.btn-cancel:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.btn-cancel:active {
+  transform: translateY(0);
+}
+
+.btn-payment {
+  background: #10b981;
+  color: var(--white);
+}
+
+.btn-payment:hover {
+  background: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-payment:active {
+  transform: translateY(0);
 }
 
 /* PROFILE PANEL */
@@ -542,10 +597,12 @@ body.appointments-page {
 /* CREATE APPOINTMENT PAGE */
 .create-appointment-page {
   background: #f2f5f8;
+  overflow-x: hidden;
 }
 
 .create-main {
   padding: 28px 0 40px;
+  overflow-x: clip;
 }
 
 .create-layout {
@@ -553,12 +610,15 @@ body.appointments-page {
   grid-template-columns: minmax(0, 1fr) 300px;
   gap: 20px;
   align-items: start;
+  width: 100%;
+  max-width: 100%;
 }
 
 .create-panel {
   background: #9fd0eb;
   border: 1px solid #4f7388;
   padding: 22px 24px 18px;
+  min-width: 0;
 }
 
 .create-panel-header {
@@ -784,6 +844,7 @@ body.appointments-page {
 
 .summary-panel {
   padding-top: 4px;
+  min-width: 0;
 }
 
 .summary-panel h3 {
@@ -1005,6 +1066,48 @@ body.appointments-page {
   color: #26374b;
 }
 
+.payment-method-panel {
+  background:
+    radial-gradient(circle at 85% 8%, rgba(37, 99, 235, 0.12), transparent 42%),
+    linear-gradient(180deg, #fbfdff 0%, #f5f9ff 100%);
+}
+
+.payment-method-title {
+  margin-bottom: 14px;
+  letter-spacing: 0.2px;
+}
+
+.vnpay-brand-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vnpay-mark {
+  width: 34px;
+  height: 26px;
+  border-radius: 8px;
+  transform: rotate(-15deg);
+  background: linear-gradient(135deg, #0f5fbf 0%, #0f5fbf 50%, #ed1b2f 50%, #ed1b2f 100%);
+  box-shadow: 0 6px 14px rgba(24, 78, 170, 0.3);
+}
+
+.vnpay-wordmark {
+  font-size: 29px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.vnpay-red {
+  color: #e71d32;
+}
+
+.vnpay-blue {
+  color: #1a59a8;
+}
+
 .bank-logos {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1023,6 +1126,64 @@ body.appointments-page {
   border-radius: 12px;
   background: #fff;
   padding: 12px;
+}
+
+.qr-box-elevated {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 288px;
+  padding: 22px;
+  border-radius: 16px;
+  border: 1px solid #d8e4f3;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.09);
+  overflow: hidden;
+}
+
+.qr-glow {
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.22) 0%, rgba(37, 99, 235, 0) 72%);
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.payment-qr-image-clean {
+  position: relative;
+  z-index: 1;
+  width: 228px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 18px;
+  border: 10px solid #ffffff;
+  background: #ffffff;
+  box-shadow: 0 18px 28px rgba(30, 64, 175, 0.2);
+  transition: opacity 0.25s ease;
+}
+
+.qr-box-elevated.is-loading .payment-qr-image-clean {
+  opacity: 0;
+}
+
+.qr-box-elevated.is-loading::after {
+  content: '';
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 3px solid #d9e7fb;
+  border-top-color: #2563eb;
+  animation: qrSpin 0.9s linear infinite;
+  position: absolute;
+}
+
+@keyframes qrSpin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .vnpay-logo {
@@ -1057,6 +1218,404 @@ body.appointments-page {
   background: #15803d;
 }
 
+.qr-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: none;
+}
+
+.qr-modal.is-open {
+  display: block;
+}
+
+.qr-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.62);
+}
+
+.qr-modal-content {
+  position: relative;
+  margin: 6vh auto 0;
+  width: min(440px, calc(100% - 24px));
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.3);
+}
+
+.qr-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  border: 0;
+  background: transparent;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.payment-qr-image {
+  width: 250px;
+  max-width: 100%;
+  margin: 10px auto 14px;
+  border: 1px solid #dbe5f1;
+  border-radius: 10px;
+  padding: 10px;
+  background: #fff;
+}
+
+.payment-qr-link {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #0f62d6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.payment-qr-hint {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* CALENDAR VIEW */
+.calendar-shell {
+  display: grid;
+  gap: 14px;
+}
+
+.calendar-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.calendar-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.calendar-title {
+  margin: 0;
+  font-size: 20px;
+  color: #1f2937;
+}
+
+.calendar-nav-group {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.calendar-btn {
+  border: 1px solid #cfd9e5;
+  background: #fff;
+  color: #273445;
+  border-radius: 8px;
+  height: 36px;
+  min-width: 36px;
+  padding: 0 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.calendar-btn.icon {
+  padding: 0;
+}
+
+.calendar-btn.is-active {
+  background: #1f6fe5;
+  color: #fff;
+  border-color: #1f6fe5;
+}
+
+.calendar-view-switch {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.calendar-stage {
+  border: 1px solid #dce5f0;
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.calendar-month-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.calendar-col-head {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  padding: 8px;
+  border-bottom: 1px solid #edf2f8;
+  background: #f8fbff;
+}
+
+.calendar-day-cell {
+  min-height: 120px;
+  border-right: 1px solid #edf2f8;
+  border-bottom: 1px solid #edf2f8;
+  padding: 8px;
+}
+
+.calendar-day-cell:nth-child(7n) {
+  border-right: none;
+}
+
+.calendar-day-cell header {
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.calendar-day-cell.is-outside {
+  background: #f9fafb;
+}
+
+.calendar-day-cell.is-today header {
+  color: #1f6fe5;
+}
+
+.calendar-day-events {
+  display: grid;
+  gap: 4px;
+}
+
+.calendar-event-chip {
+  border: none;
+  border-radius: 7px;
+  text-align: left;
+  font-size: 11px;
+  line-height: 1.25;
+  padding: 4px 6px;
+  cursor: pointer;
+}
+
+.calendar-event-chip.status-confirmed,
+.calendar-event-block.status-confirmed {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.calendar-event-chip.status-pending,
+.calendar-event-block.status-pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.calendar-event-chip.status-unpaid,
+.calendar-event-block.status-unpaid {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.calendar-event-chip.status-cancelled,
+.calendar-event-block.status-cancelled {
+  background: #e5e7eb;
+  color: #4b5563;
+}
+
+.calendar-overflow {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.calendar-time-layout {
+  --calendar-day-head-height: 34px;
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  max-height: 620px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.calendar-time-axis {
+  border-right: 1px solid #edf2f8;
+  background: #fbfdff;
+}
+
+.calendar-time-axis-head {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  height: var(--calendar-day-head-height);
+  background: #f8fbff;
+  border-bottom: 1px solid #edf2f8;
+}
+
+.calendar-time-label {
+  height: 60px;
+  padding: 2px 6px 0 0;
+  text-align: right;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.calendar-day-columns {
+  display: grid;
+}
+
+.calendar-time-layout.is-week .calendar-day-columns {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.calendar-time-layout.is-day .calendar-day-columns {
+  grid-template-columns: minmax(260px, 1fr);
+}
+
+.calendar-day-column {
+  border-right: 1px solid #edf2f8;
+}
+
+.calendar-day-column:last-child {
+  border-right: none;
+}
+
+.calendar-day-column-head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #f8fbff;
+  border-bottom: 1px solid #edf2f8;
+  min-height: var(--calendar-day-head-height);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
+  padding: 8px;
+  line-height: 1.2;
+}
+
+.calendar-day-column-body {
+  position: relative;
+  height: 720px;
+}
+
+.calendar-hour-line {
+  height: 60px;
+  border-bottom: 1px solid #edf2f8;
+}
+
+.calendar-event-block {
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  text-align: left;
+  padding: 5px 6px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.calendar-event-block strong,
+.calendar-event-block span {
+  display: block;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.calendar-event-refund {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.calendar-event-chip.is-selected,
+.calendar-event-block.is-selected {
+  outline: 2px solid #1f6fe5;
+}
+
+.calendar-detail {
+  border: 1px solid #dce5f0;
+  border-radius: 12px;
+  background: #f8fbff;
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.calendar-detail h4 {
+  margin: 0;
+  color: #1f2937;
+}
+
+.calendar-detail p {
+  margin: 0;
+  color: #475569;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.refund-status {
+  font-weight: 700;
+}
+
+.refund-status.is-paid {
+  color: #059669;
+}
+
+.refund-status.is-unpaid {
+  color: #b45309;
+}
+
+.calendar-detail-empty {
+  margin: 0;
+  color: #64748b;
+}
+
+.calendar-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.calendar-action-btn {
+  border: none;
+  border-radius: 8px;
+  height: 36px;
+  padding: 0 14px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.calendar-action-btn.btn-cancel {
+  background: #ef4444;
+}
+
+.calendar-action-btn.btn-payment {
+  background: #10b981;
+}
+
+.calendar-action-btn.btn-complete {
+  background: #1f6fe5;
+}
+
 /* RESPONSIVE */
 @media (max-width: 1200px) {
   .main-layout {
@@ -1081,6 +1640,7 @@ body.appointments-page {
 
   .summary-panel {
     max-width: 460px;
+    width: 100%;
   }
 
   .doctor-list-grid {
@@ -1089,6 +1649,10 @@ body.appointments-page {
 
   .checkout-layout {
     max-width: 960px;
+  }
+
+  .calendar-day-cell {
+    min-height: 104px;
   }
 }
 
@@ -1176,6 +1740,20 @@ body.appointments-page {
     border-top: 1px solid #e4ecf5;
   }
 
+  .qr-box-elevated {
+    min-height: 244px;
+    padding: 16px;
+  }
+
+  .payment-qr-image-clean {
+    width: 196px;
+    border-width: 8px;
+  }
+
+  .vnpay-wordmark {
+    font-size: 24px;
+  }
+
   .bank-logos {
     grid-template-columns: 1fr;
   }
@@ -1184,5 +1762,47 @@ body.appointments-page {
   .invoice-table td {
     font-size: 13px;
     padding: 9px 10px;
+  }
+
+  .qr-modal-content {
+    margin-top: 8vh;
+  }
+
+  .calendar-toolbar {
+    align-items: stretch;
+  }
+
+  .calendar-toolbar-left,
+  .calendar-view-switch {
+    width: 100%;
+  }
+
+  .calendar-view-switch .calendar-btn {
+    flex: 1;
+  }
+
+  .calendar-title {
+    font-size: 17px;
+  }
+
+  .calendar-month-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .calendar-col-head {
+    display: none;
+  }
+
+  .calendar-day-cell {
+    min-height: 110px;
+    border-right: 1px solid #edf2f8;
+  }
+
+  .calendar-time-layout {
+    grid-template-columns: 44px 1fr;
+  }
+
+  .calendar-time-layout.is-week .calendar-day-columns {
+    grid-template-columns: repeat(7, minmax(112px, 1fr));
   }
 }

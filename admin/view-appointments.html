@@ -23,8 +23,9 @@
         <a href="./add-doctor.html" class="nav-link">Thêm bác sĩ</a>
         <a href="./delete-doctor.html" class="nav-link">Xóa bác sĩ</a>
         <a href="./edit-doctor.html" class="nav-link">Sửa bác sĩ</a>
-        <a href="./manage-specialties.html" class="nav-link">Thêm chuyên khoa</a>
+        <a href="./manage-specialties.html" class="nav-link">Quản lý chuyên khoa</a>
         <a href="./view-appointments.html" class="nav-link nav-highlight">Xem lịch hẹn</a>
+        <a href="./doctor-stats.html" class="nav-link">Thống kê</a>
         <a href="../guest/login.html" class="nav-link">Đăng xuất</a>
       </nav>
     </div>
@@ -35,6 +36,27 @@
       <div class="admin-panel">
         <h1 class="panel-title">Danh sách lịch hẹn</h1>
 
+        <form class="inline-form" id="appointment-search-form" role="search">
+          <input
+            type="text"
+            id="appointment-title-search"
+            placeholder="Tìm theo tiêu đề..."
+            aria-label="Tìm lịch hẹn theo tiêu đề"
+          />
+          <input
+            type="text"
+            id="appointment-doctor-search"
+            placeholder="Tìm theo tên bác sĩ..."
+            aria-label="Tìm lịch hẹn theo tên bác sĩ"
+          />
+          <input
+            type="date"
+            id="appointment-date-search"
+            aria-label="Lọc lịch hẹn theo ngày"
+          />
+          <button type="submit" id="appointment-search-btn">Tìm kiếm</button>
+        </form>
+
         <table class="appointments-table">
           <thead>
             <tr>
@@ -43,11 +65,12 @@
               <th>Ngày</th>
               <th>Địa điểm</th>
               <th>Trạng thái</th>
-              <th>Hoàn tiền</th>
-            </tr>
+              <th>Hoàn tiền</th>              <th>Xóa</th>            </tr>
           </thead>
           <tbody id="appointments-table-body"></tbody>
         </table>
+
+        <div class="pagination-container" id="pagination-container" style="margin-top: 20px; text-align: center;"></div>
       </div>
     </section>
   </main>
@@ -69,18 +92,6 @@
       </div>
     </div>
   </div>
-
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-brand">
-        <div class="brand-mark"></div>
-        <div>
-          <h4>THAT Clinic</h4>
-          <p>Đặt lịch khám tại nhà tiện lợi, an toàn và nhanh chóng.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <script src="../assets/js/db-bridge.js"></script>
   <script src="../assets/js/admin-tools.js"></script>

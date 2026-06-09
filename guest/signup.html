@@ -16,15 +16,17 @@
 			<h1>Đăng ký</h1>
 			<p>Tạo tài khoản mới</p>
 
-			<form>
-				<input type="text" placeholder="Họ tên" />
-				<input type="text" placeholder="Số điện thoại/email" />
-				<input type="password" placeholder="Mật khẩu" />
-				<input type="password" placeholder="Xác nhận mật khẩu" />
+			<form id="signupForm">
+				<input id="signupFullName" type="text" placeholder="Họ tên" required />
+				<input id="signupEmail" type="email" placeholder="Gmail" required />
+				<input id="signupPhone" type="tel" placeholder="Số điện thoại" />
+				<input id="signupPassword" type="password" placeholder="Mật khẩu" required />
+				<input id="signupConfirmPassword" type="password" placeholder="Xác nhận mật khẩu" required />
 				<button type="submit">Tạo tài khoản</button>
 			</form>
 
 			<p class="signup">Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
 		</main>
+		<script src="../assets/js/auth-flow.js"></script>
 	</body>
 </html>

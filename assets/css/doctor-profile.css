@@ -1,0 +1,507 @@
+:root {
+  --blue-700: #1f6fe5;
+  --blue-600: #4aa7ff;
+  --blue-100: #cdeef8;
+  --gray-900: #1f2937;
+  --gray-700: #475569;
+  --gray-600: #6b7280;
+  --white: #ffffff;
+}
+
+.doctor-profile-page {
+  font-family: Arial, sans-serif;
+  color: var(--gray-900);
+  background: #f8f8f8;
+}
+
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid #eef2f7;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  height: 76px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: url("../img/logo.png") center/contain no-repeat;
+  background-color: #f0d9c8;
+}
+
+.brand-name {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-weight: 500;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--gray-700);
+  transition: color 0.3s ease;
+}
+
+.main-nav a.nav-highlight {
+  background: var(--blue-600);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.main-nav a.nav-link:hover {
+  color: var(--blue-700);
+}
+
+.page-banner {
+  background: var(--blue-100);
+  border-bottom: 1px solid #bce4f0;
+}
+
+.page-banner-inner {
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+}
+
+.page-banner h1 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.doctor-profile-main {
+  padding-bottom: 20px;
+}
+
+.doctor-profile-content {
+  padding: 28px 0 0;
+}
+
+.doctor-profile-card {
+  border: 1px solid #d6dee7;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(31, 111, 229, 0.08);
+}
+
+.doctor-profile-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.doctor-avatar {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  border: 1px solid #9bb6d0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 35%, #f8fafc 0 18%, #cbd5e1 18% 100%);
+}
+
+.doctor-avatar.has-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: #d6dee7;
+}
+
+.doctor-avatar.has-image::before,
+.doctor-avatar.has-image::after {
+  display: none;
+}
+
+.doctor-avatar::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 28%;
+  width: 22%;
+  height: 22%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #94a3b8;
+}
+
+.doctor-avatar::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 18%;
+  width: 52%;
+  height: 36%;
+  transform: translateX(-50%);
+  border-radius: 55% 55% 42% 42%;
+  background: #94a3b8;
+}
+
+.doctor-profile-head h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+.doctor-profile-head p {
+  margin: 4px 0 0;
+  font-size: 15px;
+  color: var(--gray-700);
+}
+
+.doctor-rating {
+  margin-top: 8px;
+  font-size: 22px;
+  color: #f59e0b;
+  letter-spacing: 2px;
+}
+
+.doctor-rating-value {
+  margin-top: 2px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.doctor-avatar-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.doctor-avatar-input {
+  max-width: 260px;
+  font-size: 13px;
+}
+
+.doctor-avatar-save {
+  height: 34px;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #1f6fe5;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.doctor-avatar-save:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.doctor-avatar-message {
+  margin: 8px 0 0;
+  min-height: 18px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.doctor-avatar-message.success {
+  color: #0f766e;
+}
+
+.doctor-avatar-message.error {
+  color: #b91c1c;
+}
+
+.doctor-featured {
+  margin-top: 18px;
+  border: 1px solid #dbe4f0;
+  border-radius: 10px;
+  background: #f8fbff;
+  padding: 14px 16px;
+}
+
+.featured-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: #94a3b8;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.featured-pill.is-active {
+  background: linear-gradient(135deg, #d4af37 0%, #f5c842 50%, #e6a817 100%);
+  color: #1a1a00;
+  letter-spacing: 0.8px;
+}
+
+.doctor-featured p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.doctor-contact {
+  margin-top: 14px;
+  padding: 14px 16px;
+  border: 1px solid #dbe4f0;
+  border-radius: 10px;
+  background: #f8fbff;
+}
+
+.doctor-contact h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.doctor-contact-row {
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.doctor-contact-input {
+  flex: 1;
+  height: 40px;
+  border: 1px solid #cfd9e6;
+  border-radius: 8px;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #1f2937;
+  background: #ffffff;
+}
+
+.doctor-contact-input:focus {
+  outline: none;
+  border-color: #4aa7ff;
+  box-shadow: 0 0 0 3px rgba(74, 167, 255, 0.15);
+}
+
+.doctor-contact-save {
+  height: 40px;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 14px;
+  background: #1f6fe5;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.doctor-contact-save:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.doctor-contact-message {
+  margin: 8px 0 0;
+  min-height: 20px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.doctor-contact-message.success {
+  color: #0f766e;
+}
+
+.doctor-contact-message.error {
+  color: #b91c1c;
+}
+
+.doctor-stats-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.empty-state {
+  margin: 0;
+  padding: 18px;
+  border: 1px dashed #b8c2cf;
+  border-radius: 10px;
+  color: #5c6674;
+  background: #f4f7fb;
+}
+
+.stat-card {
+  border: 1px solid #dae5f2;
+  background: #f8fbff;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.stat-card strong {
+  margin-top: 8px;
+  display: block;
+  font-size: 34px;
+  color: #1f2f3b;
+  line-height: 1;
+}
+
+.site-footer {
+  background: #3a3a3a;
+  color: #e3e3e3;
+  padding: 50px 0 28px;
+  margin-top: 24px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.1fr 1.4fr;
+  gap: 40px;
+}
+
+.footer-brand {
+  display: grid;
+  gap: 16px;
+}
+
+.footer-brand .brand-mark {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: url("../img/logo.png") center/contain no-repeat, #f0d9c8;
+}
+
+.footer-brand h4 {
+  margin: 0 0 6px;
+  color: var(--white);
+  font-size: 18px;
+}
+
+.footer-brand p {
+  margin: 0;
+  color: #cfcfcf;
+}
+
+.footer-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-dots span {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #bdbdbd;
+  opacity: 0.6;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.footer-links h5 {
+  margin: 0 0 12px;
+  color: var(--white);
+  font-size: 14px;
+}
+
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  color: #cfcfcf;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 32px;
+  padding-top: 18px;
+  color: #bdbdbd;
+  font-size: 13px;
+}
+
+.footer-policy {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-policy a {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .doctor-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .page-banner h1 {
+    font-size: 30px;
+  }
+
+  .doctor-profile-head {
+    align-items: flex-start;
+  }
+
+  .doctor-profile-head h2 {
+    font-size: 24px;
+  }
+
+  .stat-card strong {
+    font-size: 28px;
+  }
+
+  .doctor-contact-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+}

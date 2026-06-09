@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Thanh toán thành công - THAT Clinic</title>
+
+	<link rel="stylesheet" href="../assets/css/base.css">
+	<link rel="stylesheet" href="../assets/css/layout.css">
+	<style>
+		.success-page {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			padding: 20px;
+		}
+
+		.success-card {
+			background: white;
+			border-radius: 12px;
+			box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+			padding: 50px;
+			max-width: 500px;
+			width: 100%;
+			text-align: center;
+		}
+
+		.success-icon {
+			width: 80px;
+			height: 80px;
+			background: #28a745;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 30px;
+			font-size: 48px;
+		}
+
+		.success-card h1 {
+			color: #333;
+			font-size: 28px;
+			margin-bottom: 10px;
+		}
+
+		.success-card p {
+			color: #666;
+			font-size: 16px;
+			margin-bottom: 30px;
+			line-height: 1.6;
+		}
+
+		.success-card .info-block {
+			background: #f8f9fa;
+			border-left: 4px solid #28a745;
+			padding: 15px;
+			margin-bottom: 20px;
+			border-radius: 4px;
+			text-align: left;
+		}
+
+		.success-card .info-block label {
+			display: block;
+			color: #999;
+			font-size: 12px;
+			margin-bottom: 5px;
+			text-transform: uppercase;
+		}
+
+		.success-card .info-block span {
+			display: block;
+			color: #333;
+			font-size: 18px;
+			font-weight: 600;
+		}
+
+		.action-buttons {
+			display: flex;
+			justify-content: center;
+			margin-top: 30px;
+		}
+
+		.btn {
+			padding: 12px 20px;
+			border: none;
+			border-radius: 6px;
+			font-size: 14px;
+			font-weight: 600;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			text-decoration: none;
+			display: inline-block;
+		}
+
+		.btn-primary {
+			background: #28a745;
+			color: white;
+		}
+
+		.btn-primary:hover {
+			background: #218838;
+			transform: translateY(-2px);
+		}
+
+	</style>
+</head>
+
+<body class="appointments-page">
+	<header class="site-header">
+		<div class="container header-wrapper">
+			<a class="brand" href="./my-appointments.html">
+				<span class="brand-mark"></span>
+				<span class="brand-name">THAT Clinic</span>
+			</a>
+
+			<nav class="main-nav">
+				<a href="./my-appointments.html" class="nav-link">Hồ sơ</a>
+				<a href="./doctors.html" class="nav-link nav-highlight">Đặt lịch bác sĩ</a>
+				<a href="../guest/login.html" class="nav-link">Đăng xuất</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="success-page">
+		<div class="success-card">
+			<div class="success-icon">✓</div>
+			<h1>Thanh toán thành công!</h1>
+			<p>Lịch hẹn của bạn đã được tạo và đang chờ bác sĩ xác nhận.</p>
+
+			<div class="info-block">
+				<label>Số lịch hẹn</label>
+				<span id="appointment-id">-</span>
+			</div>
+
+			<p style="color: #28a745; font-weight: 600;">
+				💚 Bác sĩ sẽ xác nhận lịch hẹn của bạn trong vòng 24 giờ
+			</p>
+
+			<div class="action-buttons">
+				<a href="./my-appointments.html" class="btn btn-primary">Quay lại lịch hẹn</a>
+			</div>
+		</div>
+	</main>
+
+	<script>
+		// Get appointment ID from URL
+		const urlParams = new URLSearchParams(window.location.search);
+		const appointmentId = urlParams.get('appointmentId');
+
+		if (appointmentId) {
+			document.getElementById('appointment-id').textContent = appointmentId.substring(0, 8) + '...';
+		}
+
+	</script>
+</body>
+
+</html>

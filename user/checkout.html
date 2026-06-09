@@ -39,55 +39,50 @@
 							<thead>
 								<tr>
 									<th>Thông tin</th>
-									<th class="text-right">Giá tiền</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
 									<td>Tên bác sĩ: BS. Nguyễn Hữu Trí</td>
-									<td class="text-right">250.000đ</td>
 								</tr>
 								<tr>
 									<td>Chuyên khoa: Nội tổng quát</td>
-									<td class="text-right">0đ</td>
 								</tr>
 								<tr>
 									<td>Dịch vụ khám tại nhà</td>
-									<td class="text-right">350.000đ</td>
 								</tr>
 								<tr>
 									<td>Phí di chuyển</td>
-									<td class="text-right">100.000đ</td>
 								</tr>
 								<tr>
 									<td>Phụ phí ngoài giờ</td>
-									<td class="text-right">150.000đ</td>
 								</tr>
 							</tbody>
 						</table>
 
 						<div class="payment-total">
-							<p><span>Tạm tính</span><strong>850.000đ</strong></p>
 							<p class="grand"><span>Thành tiền</span><strong>850.000đ</strong></p>
 						</div>
 					</div>
 
-					<aside class="invoice-right">
-						<h3>Hình thức thanh toán</h3>
-
-						<div class="qr-box">
-							<img class="vnpay-logo" src="../assets/img/vnpay.svg" alt="VNPay">
-							<img class="qr-image" src="../assets/img/qr-vnpay.svg" alt="Mã QR thanh toán">
-						</div>
-
-						<div class="paid-action">
-							<button type="button" class="paid-btn">Đã thanh toán</button>
+					<aside class="invoice-right payment-method-panel">
+						<h3 class="payment-method-title">
+							<span class="vnpay-brand-inline" aria-label="VNPAY">
+								<span class="vnpay-mark" aria-hidden="true"></span>
+								<span class="vnpay-wordmark"><span class="vnpay-red">VN</span><span class="vnpay-blue">PAY</span></span>
+							</span>
+						</h3>
+						<div class="qr-box qr-box-elevated is-loading" id="payment-qr-direct-box" aria-live="polite">
+							<div class="qr-glow" aria-hidden="true"></div>
+							<img id="payment-qr-image" alt="QR để thanh toán VNPAY" class="payment-qr-image payment-qr-image-clean">
 						</div>
 					</aside>
 				</div>
 			</section>
 		</div>
 	</main>
+
+
 
 	<footer class="site-footer">
 		<div class="container footer-content">
@@ -114,12 +109,6 @@
 					<a href="#">Đăng ký</a>
 				</div>
 				<div>
-					<h5>Về chúng tôi</h5>
-					<a href="#">Giới thiệu</a>
-					<a href="#">Đội ngũ</a>
-					<a href="#">Nhà đầu tư</a>
-				</div>
-				<div>
 					<h5>Hỗ trợ</h5>
 					<a href="mailto:support@thatclinic.vn">support@thatclinic.vn</a>
 					<a href="tel:+84851234567">+84 851 234 567</a>
@@ -129,11 +118,6 @@
 
 		<div class="container footer-bottom">
 			<span>© 2026 THAT Clinic. Bảo lưu mọi quyền.</span>
-			<div class="footer-policy">
-				<a href="#">Điều khoản</a>
-				<a href="#">Chính sách</a>
-				<a href="#">Trợ năng</a>
-			</div>
 		</div>
 	</footer>
 

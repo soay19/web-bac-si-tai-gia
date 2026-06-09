@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hồ sơ bác sĩ - THAT Clinic</title>
+
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/doctor-profile.css">
+</head>
+
+<body class="doctor-profile-page">
+  <header class="site-header">
+    <div class="container header-wrapper">
+      <a class="brand" href="./my-appointments.html">
+        <span class="brand-mark"></span>
+        <span class="brand-name">THAT Clinic</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="./my-appointments.html" class="nav-link">Lịch hẹn</a>
+        <a href="./doctor-requests.html" class="nav-link">Lịch hẹn đề xuất</a>
+        <a href="./profile.html" class="nav-link nav-highlight">Hồ sơ</a>
+        <a href="../guest/login.html" class="nav-link">Đăng xuất</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doctor-profile-main">
+    <section class="page-banner">
+      <div class="container page-banner-inner">
+        <h1>Hồ sơ bác sĩ</h1>
+      </div>
+    </section>
+
+    <section class="container doctor-profile-content">
+      <article class="doctor-profile-card" id="doctor-profile-card">
+        <div class="doctor-profile-head">
+          <span class="doctor-avatar" aria-hidden="true"></span>
+          <div>
+            <h2 id="doctor-name">Đang tải tên bác sĩ...</h2>
+            <p id="doctor-specialty">Đang tải chuyên khoa...</p>
+            <div class="doctor-rating" id="doctor-rating-stars">☆☆☆☆☆</div>
+            <p class="doctor-rating-value" id="doctor-rating-value">0.0/5</p>
+            <div class="doctor-avatar-actions">
+              <input
+                type="file"
+                id="doctor-avatar-input"
+                class="doctor-avatar-input"
+                accept="image/png,image/jpeg,image/webp"
+              >
+              <button type="button" id="doctor-avatar-save" class="doctor-avatar-save">Lưu ảnh đại diện</button>
+            </div>
+            <p id="doctor-avatar-message" class="doctor-avatar-message" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <div class="doctor-featured" id="doctor-featured">
+          <span class="featured-pill" id="doctor-featured-pill">Đang cập nhật</span>
+        </div>
+
+        <section class="doctor-contact" aria-label="Liên hệ bác sĩ">
+          <h3>Số điện thoại</h3>
+          <div class="doctor-contact-row">
+            <input
+              type="tel"
+              id="doctor-phone-input"
+              class="doctor-contact-input"
+              placeholder="Nhập số điện thoại"
+              autocomplete="tel"
+            >
+            <button type="button" id="doctor-phone-save" class="doctor-contact-save">Lưu số điện thoại</button>
+          </div>
+          <p id="doctor-phone-message" class="doctor-contact-message" aria-live="polite"></p>
+        </section>
+
+        <div class="doctor-stats-grid">
+          <article class="stat-card">
+            <h3>Lịch đã xác nhận</h3>
+            <strong id="doctor-confirmed-count">0</strong>
+          </article>
+
+          <article class="stat-card">
+            <h3>Lịch chưa xác nhận</h3>
+            <strong id="doctor-unconfirmed-count">0</strong>
+          </article>
+
+          <article class="stat-card">
+            <h3>Chờ/Xác nhận</h3>
+            <strong id="doctor-pending-confirmed-count">0</strong>
+          </article>
+
+          <article class="stat-card">
+            <h3>Số năm kinh nghiệm</h3>
+            <strong id="doctor-experience-years">0 năm</strong>
+          </article>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="../assets/js/db-bridge.js"></script>
+  <script src="../assets/js/appointments-flow.js"></script>
+</body>
+
+</html>

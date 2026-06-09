@@ -63,46 +63,11 @@
           <p>Chọn chuyên khoa phù hợp và đặt lịch khám tại nhà dễ dàng.</p>
         </div>
 
-        <div class="services-grid">
+        <div class="services-grid" id="services-grid">
           <article class="service-card">
             <div class="service-icon icon-stethoscope"></div>
-            <h3>Khám tổng quát</h3>
-            <p>Đánh giá sức khỏe định kỳ, tư vấn cá nhân hóa.</p>
-            <a class="btn btn-primary" href="./login.html">Đặt lịch hẹn</a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon icon-pediatrics"></div>
-            <h3>Nhi khoa</h3>
-            <p>Chăm sóc và theo dõi sức khỏe trẻ em tại nhà.</p>
-            <a class="btn btn-primary" href="./login.html">Đặt lịch hẹn</a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon icon-nutrition"></div>
-            <h3>Dinh dưỡng</h3>
-            <p>Tư vấn chế độ ăn và cải thiện sức khỏe toàn diện.</p>
-            <a class="btn btn-primary" href="./login.html">Đặt lịch hẹn</a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon icon-heart"></div>
-            <h3>Tim mạch</h3>
-            <p>Chẩn đoán sớm và quản lý sức khỏe tim mạch.</p>
-            <a class="btn btn-primary" href="./login.html">Đặt lịch hẹn</a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon icon-eye"></div>
-            <h3>Nhãn khoa</h3>
-            <p>Kiểm tra thị lực và chăm sóc mắt định kỳ.</p>
-            <a class="btn btn-primary" href="./login.html">Đặt lịch hẹn</a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon icon-ortho"></div>
-            <h3>Chỉnh hình</h3>
-            <p>Phục hồi vận động, giảm đau nhức hiệu quả.</p>
+            <h3>Đang tải dịch vụ...</h3>
+            <p>Hệ thống đang lấy dữ liệu chuyên khoa từ cơ sở dữ liệu.</p>
             <a class="btn btn-primary" href="./login.html">Đặt lịch hẹn</a>
           </article>
         </div>
@@ -110,261 +75,28 @@
     </section>
         <!-- TRANG BÁC SĨ -->
     <section id="doctors" class="section doctors">
-        
       <div class="container doctor-layout">
-        <aside class="doctor-filter">
-          <h2>Chuyên khoa</h2>
-          <nav class="doctor-filter-nav" aria-label="Danh sách chuyên khoa">
-            <a href="#khoa-tong-quat" class="filter-link">Tổng quát</a>
-            <a href="#khoa-nhi-khoa" class="filter-link">Nhi khoa</a>
-            <a href="#khoa-dinh-duong" class="filter-link">Dinh dưỡng</a>
-            <a href="#khoa-tim-mach" class="filter-link">Tim mạch</a>
-            <a href="#khoa-nhan-khoa" class="filter-link">Nhãn khoa</a>
-            <a href="#khoa-co-xuong-khop" class="filter-link">chỉnh hình</a>
-          </nav>
-        </aside>
-
         <div class="doctor-content">
-          
-          <!-- LIST TỔNG QUÁT -->
-          <div class="pill" id="khoa-tong-quat">Tổng quát</div>
-          <div class="doctor-grid">
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Nguyễn Minh Anh</h3>
-                <span>Tổng quát</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 350k</span>
-                  <span class="doctor-rating">4.8</span>
-                </div>
-              </div>
-            </article>
-            
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Trần Gia Huy</h3>
-                <span>Tổng quát</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 400k</span>
-                  <span class="doctor-rating">4.9</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Lê Thanh Hà</h3>
-                <span>Tổng quát</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 320k</span>
-                  <span class="doctor-rating">4.7</span>
-                </div>
-              </div>
-            </article>
+          <div class="content-header">
+            <h2 class="section-title">Tìm Bác Sĩ</h2>
+            <div class="search-box">
+              <input id="doctor-search" type="text" placeholder="Tìm kiếm bác sĩ..." />
+              <button type="button" class="btn-search" id="doctor-search-btn">🔍</button>
+            </div>
           </div>
 
-          <!-- LIST NHI KHOA -->
-          <div class="pill" id="khoa-nhi-khoa">Nhi khoa</div>
-          <div class="doctor-grid">
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Phạm Ngọc Thảo</h3>
-                <span>Nhi khoa</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 380k</span>
-                  <span class="doctor-rating">4.8</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Đặng Tuấn Kiệt</h3>
-                <span>Nhi khoa</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 360k</span>
-                  <span class="doctor-rating">4.6</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Vũ Hoàng Yến</h3>
-                <span>Nhi khoa</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 410k</span>
-                  <span class="doctor-rating">4.9</span>
-                </div>
-              </div>
-            </article>
+          <div class="doctor-filter-toolbar" aria-label="Bộ lọc bác sĩ">
+            <button type="button" class="doctor-filter-chip is-active" data-doctor-filter="all">Tất cả bác sĩ</button>
+            <button type="button" class="doctor-filter-chip" data-doctor-filter="featured">Bác sĩ VIP</button>
           </div>
 
-          <!-- LIST DINH DƯỠNG --> 
-          <div class="pill" id="khoa-dinh-duong">Dinh dưỡng</div>
-          <div class="doctor-grid">
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Nguyễn Thu Trang</h3>
-                <span>Dinh dưỡng</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 390k</span>
-                  <span class="doctor-rating">4.7</span>
-                </div>
-              </div>
-            </article>
+          <nav class="specialty-nav" id="doctor-filter-nav" aria-label="Điều hướng chuyên khoa">
+            <span>Đang tải chuyên khoa...</span>
+          </nav>
 
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Phạm Quốc Bảo</h3>
-                <span>Dinh dưỡng</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 420k</span>
-                  <span class="doctor-rating">4.8</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Lý Thảo Nhi</h3>
-                <span>Dinh dưỡng</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 360k</span>
-                  <span class="doctor-rating">4.6</span>
-                </div>
-              </div>
-            </article>
+          <div id="doctor-content">
+            <p>Đang tải danh sách bác sĩ...</p>
           </div>
-
-          <!-- LIST TIM MẠCH -->
-          <div class="pill" id="khoa-tim-mach">Tim mạch</div>
-          <div class="doctor-grid">
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Trần Đức Minh</h3>
-                <span>Tim mạch</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 450k</span>
-                  <span class="doctor-rating">4.9</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Phan Hồng An</h3>
-                <span>Tim mạch</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 430k</span>
-                  <span class="doctor-rating">4.8</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Lê Phương Thảo</h3>
-                <span>Tim mạch</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 410k</span>
-                  <span class="doctor-rating">4.7</span>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="pill" id="khoa-nhan-khoa">Nhãn khoa</div>
-          <div class="doctor-grid">
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Nguyễn Hồng Nhung</h3>
-                <span>Nhãn khoa</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 370k</span>
-                  <span class="doctor-rating">4.6</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Phạm Gia Hân</h3>
-                <span>Nhãn khoa</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 400k</span>
-                  <span class="doctor-rating">4.8</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Trịnh Minh Khôi</h3>
-                <span>Nhãn khoa</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 380k</span>
-                  <span class="doctor-rating">4.7</span>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="pill" id="khoa-co-xuong-khop">chỉnh hình</div>
-          <div class="doctor-grid">
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Đinh Quang Huy</h3>
-                <span>chỉnh hình</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 420k</span>
-                  <span class="doctor-rating">4.7</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Trần Anh Tuấn</h3>
-                <span>chỉnh hình</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 390k</span>
-                  <span class="doctor-rating">4.6</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="doctor-card">
-              <div class="doctor-photo"></div>
-              <div class="doctor-info">
-                <h3>BS. Nguyễn Bảo Ngọc</h3>
-                <span>chỉnh hình</span>
-                <div class="doctor-meta">
-                  <span class="doctor-fee">Phí: 410k</span>
-                  <span class="doctor-rating">4.8</span>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          
         </div>
       </div>
     </section>
@@ -420,6 +152,473 @@
   </footer>
 
   <script>
+    const API_BASE =
+      window.THAT_CLINIC_API_BASE ||
+      `${window.location.protocol}//${window.location.hostname}:3000/api`;
+
+    const serviceIcons = [
+      'icon-stethoscope',
+      'icon-pediatrics',
+      'icon-nutrition',
+      'icon-heart',
+      'icon-eye',
+      'icon-ortho'
+    ];
+
+    const fallbackSpecialties = [
+      { name: 'Tổng quát', description: 'Đánh giá sức khỏe định kỳ, tư vấn cá nhân hóa.' },
+      { name: 'Nhi khoa', description: 'Chăm sóc và theo dõi sức khỏe trẻ em tại nhà.' },
+      { name: 'Dinh dưỡng', description: 'Tư vấn chế độ ăn và cải thiện sức khỏe toàn diện.' },
+      { name: 'Tim mạch', description: 'Chẩn đoán sớm và quản lý sức khỏe tim mạch.' },
+      { name: 'Nhãn khoa', description: 'Kiểm tra thị lực và chăm sóc mắt định kỳ.' },
+      { name: 'Chỉnh hình', description: 'Phục hồi vận động, giảm đau nhức hiệu quả.' }
+    ];
+
+    const escapeHtml = (value) =>
+      String(value || '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+
+    const escapeAttr = (value) =>
+      String(value || '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('"', '&quot;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;');
+
+    const renderServices = (specialties) => {
+      const servicesGrid = document.getElementById('services-grid');
+      if (!servicesGrid) {
+        return;
+      }
+
+      const items = Array.isArray(specialties) && specialties.length ? specialties : fallbackSpecialties;
+
+      servicesGrid.innerHTML = items
+        .map((item, index) => {
+          const iconClass = serviceIcons[index % serviceIcons.length];
+          const name = String(item?.name || '').trim() || 'Chuyên khoa';
+          const description = String(item?.description || '').trim() || 'Dịch vụ đang được cập nhật.';
+
+          return `
+            <article class="service-card">
+              <div class="service-icon ${iconClass}"></div>
+              <h3>${escapeHtml(name)}</h3>
+              <p>${escapeHtml(description)}</p>
+              <a class="btn btn-primary" href="./login.html">Đặt lịch hẹn</a>
+            </article>
+          `;
+        })
+        .join('');
+    };
+
+    const toSlug = (value) =>
+      String(value || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
+
+    const normalizeSearchText = (value) =>
+      String(value || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/đ/g, 'd')
+        .replace(/Đ/g, 'D')
+        .toLowerCase()
+        .trim();
+
+    const fallbackDoctors = [
+      {
+        id: 'fallback-1',
+        name: 'BS. Nguyen Minh Anh',
+        specialty: 'Tong quat',
+        specialtyId: 'fallback-general',
+        rating: 4.8,
+        experienceYears: 8,
+        pendingConfirmedAppointments: 7
+      },
+      {
+        id: 'fallback-2',
+        name: 'BS. Dang Tuan Kiet',
+        specialty: 'Nhi khoa',
+        specialtyId: 'fallback-pediatrics',
+        rating: 4.6,
+        experienceYears: 6,
+        pendingConfirmedAppointments: 5
+      },
+      {
+        id: 'fallback-3',
+        name: 'BS. Le Thanh Ha',
+        specialty: 'Dinh duong',
+        specialtyId: 'fallback-nutrition',
+        rating: 4.7,
+        experienceYears: 7,
+        pendingConfirmedAppointments: 9
+      }
+    ];
+
+    const doctorDirectoryState = {
+      doctors: [],
+      specialties: [],
+      activeFilter: 'all'
+    };
+
+    const toStars = (rating) => {
+      const rounded = Math.round(Number(rating) || 0);
+      const full = Math.max(0, Math.min(5, rounded));
+      return '★'.repeat(full) + '☆'.repeat(5 - full);
+    };
+
+    const getFeaturedDoctorIds = (doctors) => {
+      // VIP = top 5 doctors by totalRevenue (ties at the 5th position included)
+      const revenues = doctors
+        .map((d) => Number(d.totalRevenue || 0))
+        .filter((v) => v > 0);
+      const sortedRevenues = revenues.sort((a, b) => b - a);
+      const threshold = sortedRevenues.length >= 5
+        ? sortedRevenues[4]
+        : (sortedRevenues[sortedRevenues.length - 1] || 0);
+
+      const featuredIds = new Set();
+      if (threshold > 0) {
+        doctors.forEach((doctor) => {
+          if (Number(doctor.totalRevenue || 0) >= threshold) {
+            featuredIds.add(doctor.id);
+          }
+        });
+      }
+      return featuredIds;
+    };
+
+    const toSeed = (input) => {
+      let hash = 0;
+      const text = String(input || '');
+      for (let index = 0; index < text.length; index += 1) {
+        hash = (hash * 31 + text.charCodeAt(index)) >>> 0;
+      }
+      return hash;
+    };
+
+    const normalizeName = (value) =>
+      String(value || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/đ/g, 'd')
+        .replace(/Đ/g, 'D')
+        .toLowerCase();
+
+    const inferGenderByName = (name) => {
+      const normalized = normalizeName(name).replace(/\b(bs\.?|dr\.?|bac\s*si)\b/g, '').trim();
+      if (!normalized) {
+        return 'male';
+      }
+
+      if (/\bthi\b/.test(normalized)) {
+        return 'female';
+      }
+
+      const femaleHints = new Set([
+        'anh', 'chi', 'duyen', 'ha', 'hang', 'hien', 'huong', 'khanh', 'lan', 'linh', 'mai', 'my',
+        'ngoc', 'nhung', 'phuong', 'quynh', 'thao', 'thu', 'thuy', 'trang', 'trinh', 'vy', 'yen'
+      ]);
+      const parts = normalized.split(/\s+/).filter(Boolean);
+      const last = parts[parts.length - 1] || '';
+      return femaleHints.has(last) ? 'female' : 'male';
+    };
+
+    const getDoctorGender = (doctor) => {
+      const apiGender = String(doctor?.gender || '').trim().toLowerCase();
+      if (apiGender === 'female' || apiGender === 'male') {
+        return apiGender;
+      }
+      return inferGenderByName(doctor?.name || '');
+    };
+
+    const getDoctorKey = (doctor) => String(doctor?.id || doctor?.name || 'unknown');
+
+    const getInitials = (name) => {
+      const cleaned = String(name || '').replace(/\b(bs\.?|dr\.?|bac\s*si)\b/gi, '').trim();
+      if (!cleaned) {
+        return 'BS';
+      }
+
+      const parts = cleaned.split(/\s+/).filter(Boolean);
+      if (parts.length === 1) {
+        return parts[0].slice(0, 2).toUpperCase();
+      }
+
+      return `${parts[0][0] || ''}${parts[parts.length - 1][0] || ''}`.toUpperCase();
+    };
+
+    const buildInlineFallbackAvatar = (doctor) => {
+      const initials = getInitials(doctor?.name || '');
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240"><rect width="240" height="240" rx="120" fill="#cbd5e1"/><text x="120" y="138" text-anchor="middle" fill="#475569" font-size="82" font-family="Arial, sans-serif" font-weight="700">${initials}</text></svg>`;
+      return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+    };
+
+    const buildFallbackAvatar = (doctor) => {
+      const seed = toSeed(`${doctor?.id || ''}:${doctor?.name || ''}`);
+      const gender = getDoctorGender(doctor) === 'female' ? 'women' : 'men';
+      const index = (seed % 99) + 1;
+      return `https://randomuser.me/api/portraits/${gender}/${index}.jpg`;
+    };
+
+    const buildUniqueFallbackAvatarMap = (doctors) => {
+      const usedMen = new Set();
+      const usedWomen = new Set();
+      const map = new Map();
+
+      doctors.forEach((doctor) => {
+        if (String(doctor?.avatarUrl || '').trim()) {
+          return;
+        }
+
+        const gender = getDoctorGender(doctor);
+        const targetSet = gender === 'female' ? usedWomen : usedMen;
+        const category = gender === 'female' ? 'women' : 'men';
+
+        let index = (toSeed(`${doctor?.id || ''}:${doctor?.name || ''}`) % 99) + 1;
+        let attempts = 0;
+        while (targetSet.has(index) && attempts < 120) {
+          index = (index % 99) + 1;
+          attempts += 1;
+        }
+
+        targetSet.add(index);
+        map.set(getDoctorKey(doctor), `https://randomuser.me/api/portraits/${category}/${index}.jpg`);
+      });
+
+      return map;
+    };
+
+    const renderDoctorAvatar = (doctor, fallbackMap) => {
+      const doctorKey = getDoctorKey(doctor);
+      const fallbackUrl = fallbackMap?.get(doctorKey) || buildFallbackAvatar(doctor);
+      const avatarUrl = String(doctor?.avatarUrl || '').trim() || fallbackUrl;
+      const inlineFallback = buildInlineFallbackAvatar(doctor);
+
+      return `<img class="doctor-avatar-image" src="${escapeAttr(avatarUrl)}" alt="Ảnh đại diện ${escapeAttr(
+        doctor?.name || 'bác sĩ'
+      )}" loading="lazy" onerror="this.onerror=null;this.src='${escapeAttr(inlineFallback)}';">`;
+    };
+
+    const normalizeDoctors = (doctors, specialties) => {
+      const specialtyByName = new Map(
+        specialties
+          .filter((item) => String(item?.name || '').trim())
+          .map((item) => [String(item.name).trim().toLowerCase(), item])
+      );
+
+      return doctors.map((doctor, index) => {
+        const specialtyName = String(doctor?.specialty || '').trim() || 'Chuyên khoa khác';
+        const specialtyFromName = specialtyByName.get(specialtyName.toLowerCase());
+        const specialtyId = String(doctor?.specialtyId || specialtyFromName?.id || `fallback-specialty-${index}`);
+
+        return {
+          id: String(doctor?.id || `fallback-doctor-${index}`),
+          name: String(doctor?.name || '').trim() || 'BS. Chua cap nhat',
+          gender: getDoctorGender(doctor),
+          avatarUrl: String(doctor?.avatarUrl || '').trim(),
+          specialty: specialtyName,
+          specialtyId,
+          rating: Number(doctor?.rating || 0),
+          experienceYears: Math.max(0, Number(doctor?.experienceYears || 0)),
+          pendingConfirmedAppointments: Math.max(0, Number(doctor?.pendingConfirmedAppointments || 0)),
+          proposedCurrentAppointments: Math.max(
+            0,
+            Number(doctor?.proposedCurrentAppointments || doctor?.pendingConfirmedAppointments || 0)
+          ),
+          totalRevenue: Math.max(0, Number(doctor?.totalRevenue || 0))
+        };
+      });
+    };
+
+    const renderDoctors = () => {
+      const searchInput = document.getElementById('doctor-search');
+      const filterNav = document.getElementById('doctor-filter-nav');
+      const doctorContent = document.getElementById('doctor-content');
+
+      if (!searchInput || !filterNav || !doctorContent) {
+        return;
+      }
+
+      const keyword = normalizeSearchText(searchInput.value || '');
+      const featuredDoctorIds = getFeaturedDoctorIds(doctorDirectoryState.doctors);
+      const fallbackAvatarMap = buildUniqueFallbackAvatarMap(doctorDirectoryState.doctors);
+      const filtered = doctorDirectoryState.doctors.filter((doctor) => {
+        if (doctorDirectoryState.activeFilter === 'featured' && !featuredDoctorIds.has(doctor.id)) {
+          return false;
+        }
+
+        if (!keyword) {
+          return true;
+        }
+
+        return (
+          normalizeSearchText(doctor.name).includes(keyword) ||
+          normalizeSearchText(doctor.specialty).includes(keyword)
+        );
+      });
+
+      const grouped = filtered.reduce((acc, doctor) => {
+        if (!acc[doctor.specialtyId]) {
+          acc[doctor.specialtyId] = [];
+        }
+        acc[doctor.specialtyId].push(doctor);
+        return acc;
+      }, {});
+
+      if (doctorDirectoryState.activeFilter === 'featured') {
+        Object.values(grouped).forEach((group) => {
+          group.sort((left, right) =>
+            Number(right.totalRevenue || 0) - Number(left.totalRevenue || 0) ||
+            Number(right.rating || 0) - Number(left.rating || 0) ||
+            left.name.localeCompare(right.name, 'vi')
+          );
+        });
+      }
+
+      const specialties = doctorDirectoryState.specialties.filter(
+        (specialty) => Array.isArray(grouped[specialty.id]) && grouped[specialty.id].length
+      );
+
+      if (!specialties.length) {
+        filterNav.innerHTML = doctorDirectoryState.specialties.length
+          ? doctorDirectoryState.specialties
+              .map(
+                (specialty) =>
+                  `<a href="#khoa-${toSlug(specialty.name)}" class="specialty-link">${escapeHtml(specialty.name)}</a>`
+              )
+              .join('')
+          : '';
+        doctorContent.innerHTML = '<p>Không tìm thấy bác sĩ phù hợp.</p>';
+        return;
+      }
+
+      filterNav.innerHTML = specialties
+        .map(
+          (specialty) =>
+            `<a href="#khoa-${toSlug(specialty.name)}" class="specialty-link">${escapeHtml(specialty.name)}</a>`
+        )
+        .join('');
+
+      doctorContent.innerHTML = specialties
+        .map((specialty) => {
+          const cards = grouped[specialty.id]
+            .map((doctor) => {
+              const isFeatured = featuredDoctorIds.has(doctor.id);
+              return `
+                <div class="doctor-card${isFeatured ? ' doctor-card--featured' : ''}">
+                  <div class="doctor-image">
+                    ${renderDoctorAvatar(doctor, fallbackAvatarMap)}
+                    ${isFeatured ? '<span class="featured-badge">VIP</span>' : ''}
+                    <span class="specialty-badge">${escapeHtml(specialty.name)}</span>
+                  </div>
+                  <div class="doctor-info">
+                    <h3 class="doctor-name">${escapeHtml(doctor.name)}</h3>
+                    <p class="doctor-specialty">${escapeHtml(specialty.name)}</p>
+                    <div class="doctor-rating">
+                      <span class="stars">${toStars(doctor.rating)}</span>
+                      <span class="rating-count">Số lịch hẹn: ${Number(doctor.proposedCurrentAppointments || doctor.pendingConfirmedAppointments || 0)}</span>
+                    </div>
+                    <p class="doctor-experience">Kinh nghiệm: ${Number(doctor.experienceYears || 0)} năm</p>
+                    <a href="./login.html" class="btn btn-book">Đăng nhập để đặt lịch</a>
+                  </div>
+                </div>
+              `;
+            })
+            .join('');
+
+          return `
+            <section class="specialty-section" id="khoa-${toSlug(specialty.name)}">
+              <h3 class="specialty-heading">${escapeHtml(specialty.name)}</h3>
+              <div class="doctors-grid">${cards}</div>
+            </section>
+          `;
+        })
+        .join('');
+    };
+
+    const setupDoctorDirectoryInteractions = () => {
+      const searchInput = document.getElementById('doctor-search');
+      const searchButton = document.getElementById('doctor-search-btn');
+      const filterButtons = document.querySelectorAll('.doctor-filter-chip');
+
+      if (!searchInput || !searchButton || !filterButtons.length) {
+        return;
+      }
+
+      const runSearch = () => {
+        renderDoctors();
+      };
+
+      searchInput.addEventListener('input', runSearch);
+      searchInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          runSearch();
+        }
+      });
+      searchButton.addEventListener('click', runSearch);
+
+      filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const filter = button.getAttribute('data-doctor-filter') || 'all';
+          doctorDirectoryState.activeFilter = filter;
+          filterButtons.forEach((item) => {
+            item.classList.toggle('is-active', item.getAttribute('data-doctor-filter') === filter);
+          });
+          renderDoctors();
+        });
+      });
+    };
+
+    const loadHomeDataFromDb = async () => {
+      try {
+        const [specialtiesResponse, doctorsResponse] = await Promise.all([
+          fetch(`${API_BASE}/specialties`),
+          fetch(`${API_BASE}/doctors`)
+        ]);
+
+        if (!specialtiesResponse.ok || !doctorsResponse.ok) {
+          throw new Error('Cannot fetch home data');
+        }
+
+        const specialtiesPayload = await specialtiesResponse.json();
+        const doctorsPayload = await doctorsResponse.json();
+        const specialties = Array.isArray(specialtiesPayload?.data) ? specialtiesPayload.data : [];
+        const doctors = Array.isArray(doctorsPayload?.data) ? doctorsPayload.data : [];
+
+        doctorDirectoryState.specialties = Array.isArray(specialties) && specialties.length
+          ? specialties
+          : fallbackSpecialties.map((item, index) => ({
+              id: `fallback-specialty-${index}`,
+              name: String(item?.name || '').trim() || `Chuyên khoa ${index + 1}`
+            }));
+        doctorDirectoryState.doctors = normalizeDoctors(doctors, doctorDirectoryState.specialties);
+
+        renderServices(specialties);
+        renderDoctors();
+      } catch (_error) {
+        doctorDirectoryState.specialties = fallbackSpecialties.map((item, index) => ({
+          id: `fallback-specialty-${index}`,
+          name: String(item?.name || '').trim() || `Chuyên khoa ${index + 1}`
+        }));
+        doctorDirectoryState.doctors = normalizeDoctors(fallbackDoctors, doctorDirectoryState.specialties);
+
+        renderServices(fallbackSpecialties);
+        renderDoctors();
+      }
+    };
+
+    setupDoctorDirectoryInteractions();
+    loadHomeDataFromDb();
+
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section[id]');
 

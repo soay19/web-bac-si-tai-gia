@@ -24,8 +24,9 @@
         <a href="./add-doctor.html" class="nav-link">Thêm bác sĩ</a>
         <a href="./delete-doctor.html" class="nav-link">Xóa bác sĩ</a>
         <a href="./edit-doctor.html" class="nav-link nav-highlight">Sửa bác sĩ</a>
-        <a href="./manage-specialties.html" class="nav-link">Thêm chuyên khoa</a>
+        <a href="./manage-specialties.html" class="nav-link">Quản lý chuyên khoa</a>
         <a href="./view-appointments.html" class="nav-link">Xem lịch hẹn</a>
+        <a href="./doctor-stats.html" class="nav-link">Thống kê</a>
         <a href="../guest/login.html" class="nav-link">Đăng xuất</a>
       </nav>
     </div>
@@ -40,6 +41,11 @@
             <input type="text" id="doctor-edit-search" placeholder="Tìm kiếm bác sĩ..." />
             <button class="btn-search" id="doctor-edit-search-btn" type="button">🔍</button>
           </div>
+        </div>
+
+        <div class="doctor-filter-toolbar" aria-label="Bộ lọc bác sĩ">
+          <button type="button" class="doctor-filter-chip is-active" data-doctor-filter="all">Tất cả bác sĩ</button>
+          <button type="button" class="doctor-filter-chip" data-doctor-filter="featured">Bác sĩ VIP</button>
         </div>
 
         <nav class="specialty-nav" id="doctor-edit-specialty-nav" aria-label="Điều hướng chuyên khoa"></nav>
@@ -60,22 +66,16 @@
         <label for="doctor-edit-specialty">Chuyên khoa</label>
         <select id="doctor-edit-specialty" name="doctorSpecialty" required></select>
 
+        <label for="doctor-edit-rating">Đánh giá (0 - 5 sao)</label>
+        <input id="doctor-edit-rating" name="doctorRating" type="number" min="0" max="5" step="0.1" required />
+
+        <label for="doctor-edit-experience">Số năm kinh nghiệm</label>
+        <input id="doctor-edit-experience" name="doctorExperience" type="number" min="0" step="1" required />
+
         <button type="submit" class="edit-modal-submit">Lưu thay đổi</button>
       </form>
     </div>
   </div>
-
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-brand">
-        <div class="brand-mark"></div>
-        <div>
-          <h4>THAT Clinic</h4>
-          <p>Đặt lịch khám tại nhà tiện lợi, an toàn và nhanh chóng.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <script src="../assets/js/db-bridge.js"></script>
   <script src="../assets/js/admin-tools.js"></script>

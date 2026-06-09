@@ -15,14 +15,20 @@
 		<main class="login-card">
 			<h1>Đăng nhập</h1>
 
-			<form action="../user/my-appointments.html">
-				<input type="text" placeholder="Số điện thoại/email" />
-				<input type="password" placeholder="Mật khẩu" />
+			<form id="loginForm">
+				<input id="loginIdentifier" type="text" placeholder="Gmail hoặc số điện thoại" required />
+				<input id="loginPassword" type="password" placeholder="Mật khẩu" required />
+				<select id="loginRole" required>
+					<option value="user">Người dùng</option>
+					<option value="doctor">Bác sĩ</option>
+					<option value="admin">Quản trị viên</option>
+				</select>
 				<a class="forgot" href="#">Quên mật khẩu?</a>
 				<button type="submit">Tiếp tục</button>
 			</form>
 
 			<p class="signup">Chưa có tài khoản? <a href="signup.html">Đăng ký</a></p>
 		</main>
+		<script src="../assets/js/auth-flow.js"></script>
 	</body>
 </html>

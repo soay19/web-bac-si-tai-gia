@@ -260,6 +260,43 @@
   color: #cbd5e1;
 }
 
+.doctor-filter-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: -10px 0 18px;
+}
+
+.doctor-filter-chip {
+  border: 1px solid #dbe7f3;
+  background: #ffffff;
+  color: #475569;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.doctor-filter-chip:hover {
+  border-color: #5b9acc;
+  color: #1f6fe5;
+}
+
+.doctor-filter-chip.is-active {
+  background: #1f6fe5;
+  border-color: #1f6fe5;
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(31, 111, 229, 0.18);
+}
+
+.filter-hint {
+  font-size: 13px;
+  color: #64748b;
+}
+
 .btn-search {
   background: none;
   border: none;
@@ -287,6 +324,11 @@
   height: 100%;
 }
 
+.doctor-card--featured {
+  border: 2px solid rgba(212, 175, 55, 0.5);
+  box-shadow: 0 10px 24px rgba(212, 175, 55, 0.12);
+}
+
 .doctor-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
@@ -303,12 +345,42 @@
   overflow: hidden;
 }
 
-.image-placeholder {
+.doctor-avatar-image {
+  position: relative;
   width: 80%;
   height: 80%;
-  background: #cbd5e1;
   border-radius: 50%;
-  opacity: 0.3;
+  object-fit: cover;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.doctor-avatar-image.is-fallback {
+  background: radial-gradient(circle at 50% 35%, #f8fafc 0 18%, #cbd5e1 18% 100%);
+  opacity: 0.55;
+}
+
+.doctor-avatar-image.is-fallback::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 28%;
+  width: 22%;
+  height: 22%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #94a3b8;
+}
+
+.doctor-avatar-image.is-fallback::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 18%;
+  width: 52%;
+  height: 36%;
+  transform: translateX(-50%);
+  border-radius: 55% 55% 42% 42%;
+  background: #94a3b8;
 }
 
 .specialty-badge {
@@ -321,6 +393,21 @@
   border-radius: 20px;
   font-size: 12px;
   font-weight: 600;
+}
+
+.featured-badge {
+  position: absolute;
+  top: 48px;
+  right: 12px;
+  background: linear-gradient(135deg, #d4af37 0%, #f5c842 50%, #e6a817 100%);
+  color: #1a1a00;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 16px rgba(212, 175, 55, 0.35);
 }
 
 .doctor-info {
@@ -548,6 +635,14 @@
 
   .search-box {
     max-width: 100%;
+  }
+
+  .doctor-filter-toolbar {
+    margin: 0 0 18px;
+  }
+
+  .filter-hint {
+    width: 100%;
   }
 
   .specialty-nav {
